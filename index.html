@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Module 9 – Human Factors (ฉบับแปลไทยสมบูรณ์ 2025)</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#111a2e; --panel2:#0e1626; --accent:#3fa9f5;
+    --accent2:#ffb020; --text:#e8edf7; --muted:#93a1bd; --border:#22304d;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Segoe UI','Sarabun','TH Sarabun New',system-ui,sans-serif;
+    line-height:1.7;
+  }
+  header{
+    background:linear-gradient(135deg,#0d1730,#152245);
+    padding:32px 24px; border-bottom:3px solid var(--accent); text-align:center;
+  }
+  header h1{ margin:0 0 6px; font-size:1.8rem; color:#fff;}
+  header p{ margin:0; color:var(--muted); font-size:0.95rem;}
+  .badge{
+    display:inline-block; background:var(--accent); color:#001a2c;
+    padding:3px 12px; border-radius:12px; font-size:0.78rem; font-weight:700;
+    margin-top:10px;
+  }
+  nav.toc{
+    max-width:1200px; margin:24px auto; padding:16px 20px;
+    background:var(--panel2); border:1px solid var(--border); border-radius:10px;
+    display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
+  }
+  nav.toc a.nav-link{
+    color:var(--text); text-decoration:none; background:var(--panel);
+    border:1px solid var(--border); padding:8px 14px; border-radius:20px;
+    font-size:0.85rem; transition:all .15s;
+  }
+  nav.toc a.nav-link:hover{ background:var(--accent); color:#001a2c; border-color:var(--accent);}
+  main{ max-width:1200px; margin:0 auto; padding:10px 16px 60px;}
+  .module-section{ padding-top:20px; margin-top:10px; border-top:2px solid var(--border);}
+  .section-title{
+    color:#fff; background:linear-gradient(90deg,#152245,#0e1626);
+    padding:14px 20px; border-radius:10px; border-left:4px solid var(--accent2);
+    font-size:1.3rem; margin-bottom:20px; position:sticky; top:0; z-index:5;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+  }
+  .page-card{ background:var(--panel); border:1px solid var(--border); border-radius:10px; margin-bottom:22px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,0.3);}
+  .page-card > .page-head{ display:flex; justify-content:space-between; align-items:center; background:var(--panel2); padding:10px 16px; border-bottom:1px solid var(--border);}
+  .page-head .pnum{ color:var(--accent2); font-weight:700; font-size:0.85rem;}
+  .page-head .ptitle{ color:var(--accent); font-weight:700; font-size:1.05rem;}
+  .content{ display:flex; flex-wrap:wrap;}
+  .imgwrap{ flex:1 1 380px; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:6px; padding:8px; border-right:1px solid var(--border);}
+  .imgwrap img{ width:100%; height:auto; display:block; border-radius:4px;}
+  .translation{ flex:1 1 420px; padding:18px 20px;}
+  .page-card > p, .page-card > ul, .page-card > ol, .page-card > table, .page-card > h4, .page-card > .note, .page-card > .dd-item { padding-left:22px; padding-right:22px; }
+  .page-card > p:first-of-type { margin-top:16px; }
+  .page-card > *:last-child { margin-bottom:18px; }
+  h4{ color:var(--accent2); margin:14px 0 6px; font-size:0.95rem;}
+  p{ margin:8px 0; font-size:0.98rem;}
+  ul, ol{ margin:6px 0; padding-left:22px;}
+  li{ margin:5px 0;}
+  .en{ color:var(--muted); font-style:italic;}
+  table.tf{ width:calc(100% - 44px); margin:10px 22px; border-collapse:collapse; font-size:0.9rem;}
+  table.tf th, table.tf td{ border:1px solid var(--border); padding:6px 8px; text-align:left; vertical-align:top;}
+  table.tf th{ background:var(--panel2); color:var(--accent2);}
+  .note{ background:#1a2540; border-left:3px solid var(--accent2); border-radius:4px; font-size:0.9rem; margin:10px 22px; padding:8px 12px !important;}
+  .quote{ background:#152245; border-left:3px solid var(--accent); border-radius:4px; font-style:italic; margin:10px 22px !important; padding:10px 14px !important;}
+  .dd-item{ background:var(--panel2); border-radius:6px; margin:10px 22px !important; padding:10px 14px !important;}
+  .dd-item strong{ color:var(--accent);}
+  .toc{ background:var(--panel2); border:1px solid var(--border); border-radius:8px; padding:14px 20px; margin-bottom:24px; font-size:0.9rem; color:var(--muted);}
+  footer{ text-align:center; color:var(--muted); font-size:0.8rem; padding:26px; border-top:1px solid var(--border); margin-top:20px;}
+  .top-link{ position:fixed; bottom:20px; right:20px; background:var(--accent); color:#001a2c; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-weight:700; box-shadow:0 4px 12px rgba(0,0,0,0.4); z-index:20;}
+  @media (max-width:800px){ .content{ flex-direction:column;} .imgwrap{ border-right:none; border-bottom:1px solid var(--border);} .section-title{ font-size:1.05rem; position:static;} }
+</style>
+</head>
+<body>
+<header id="top">
+  <h1>✈️ Module 9 – Human Factors (ปัจจัยมนุษย์)</h1>
+  <p>EASA Part-66 CAT-A/B1/B2 Basic Training — ฉบับแปลไทยสมบูรณ์ (หน้า 1–144) | Version 04/2025</p>
+  <span class="badge">รวมทุกหัวข้อ 9.0–9.10 พร้อมภาพประกอบครบทุกบท (ฉบับปรับปรุงล่าสุด)</span>
+</header>
+
+<nav class="toc">
+<a href="#sec-9-0" class="nav-link">9.0 Introduction</a>
+<a href="#sec-9-1" class="nav-link">9.1 General</a>
+<a href="#sec-9-2" class="nav-link">9.2 Human Performance and Limitations</a>
+<a href="#sec-9-3" class="nav-link">9.3 Social Psychology</a>
+<a href="#sec-9-4" class="nav-link">9.4 Factors Affecting Performance</a>
+<a href="#sec-9-5" class="nav-link">9.5 Physical Environment</a>
+<a href="#sec-9-6" class="nav-link">9.6 Tasks</a>
+<a href="#sec-9-7" class="nav-link">9.7 Communication</a>
+<a href="#sec-9-8" class="nav-link">9.8 Human Error</a>
+<a href="#sec-9-9" class="nav-link">9.9 Safety Management</a>
+<a href="#sec-9-10" class="nav-link">9.10 The 'Dirty Dozen' and Risk-Mitigation</a>
+</nav>
+
+<main>
+<section id="sec-9-0" class="module-section">
+<h2 class="section-title">Module 9.0 Introduction</h2>
+
+<div class="toc">หัวข้อในส่วนนี้: ปกเอกสาร, ตารางหลักสูตร (Syllabus) 9.0–9.10, ตารางข้อกำหนดความรู้ตาม IR 1321/2014, ระดับความรู้ EASA (Level 1/2/3) และรูปแบบข้อสอบ</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ปกเอกสาร</span><span class="pnum">หน้า 1 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-001.jpg"></div>
+<div class="translation">
+<h3>คู่มือฝึกอบรม (Training Manual)</h3>
+<p><strong>PART 66 Basic Training</strong><br><strong>CAT-A/B1/B2 Module 9</strong><br><strong>Human Factors (ปัจจัยมนุษย์)</strong></p>
+<p class="en">จัดทำโดย: Aero-Bildungs GmbH<br>Dokumentenreferenz: BT_A_B1&amp;B2_M10</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หลักสูตรการฝึกอบรม (Syllabus)</span><span class="pnum">หน้า 2 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-002.jpg"></div>
+<div class="translation">
+<p>ตารางหลักสูตรการฝึกอบรมปัจจัยมนุษย์ (Human Factors Training) ฉบับปรับปรุงใหม่:</p>
+<table class="tf">
+<tr><th>บท</th><th>หัวข้อ</th></tr>
+<tr><td>9.0</td><td>บทนำ (Introduction)</td></tr>
+<tr><td>9.1</td><td>ทั่วไป (General)</td></tr>
+<tr><td>9.2</td><td>สมรรถนะและข้อจำกัดของมนุษย์ (Human Performance and Limitations)</td></tr>
+<tr><td>9.3</td><td>จิตวิทยาสังคม (Social Psychology)</td></tr>
+<tr><td>9.4</td><td>ปัจจัยที่ส่งผลต่อสมรรถนะ (Factors Affecting Performance)</td></tr>
+<tr><td>9.5</td><td>สภาพแวดล้อมทางกายภาพ (Physical Environment)</td></tr>
+<tr><td>9.6</td><td>งาน (Tasks)</td></tr>
+<tr><td>9.7</td><td>การสื่อสาร (Communication)</td></tr>
+<tr><td>9.8</td><td>ความผิดพลาดของมนุษย์ (Human error)</td></tr>
+<tr><td>9.9</td><td><strong>การบริหารจัดการความปลอดภัย (Safety Management)</strong></td></tr>
+<tr><td>9.10</td><td><strong>“Dirty Dozen” และวิธีลดความเสี่ยง (Risk-mitigation)</strong></td></tr>
+</table>
+<div class="note">→ หัวข้อ 9.9 และ 9.10 เป็นเนื้อหาใหม่ที่เพิ่ม/ปรับปรุงในฉบับ Version 04/2025 นี้</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ข้อกำหนดความรู้ตาม IR 1321/2014, Part-66</span><span class="pnum">หน้า 3 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-003.jpg"></div>
+<div class="translation">
+<p>ตารางแสดงหัวข้อความรู้ที่จำเป็นในแต่ละบท พร้อมระดับความรู้ (Level) ที่กำหนดสำหรับ Category A และ B:</p>
+<table class="tf">
+<tr><th>บท</th><th>หัวข้อย่อยสำคัญ</th></tr>
+<tr><td><strong>9.1 General</strong></td><td>ความจำเป็นในการคำนึงถึงปัจจัยมนุษย์ในงานซ่อมบำรุง, อุบัติการณ์จากปัจจัยมนุษย์/ความผิดพลาดของมนุษย์, กฎของเมอร์ฟี</td></tr>
+<tr><td><strong>9.2 Human Performance and Limitations</strong></td><td>การมองเห็นและการได้ยิน, การประมวลผลข้อมูล, ความสนใจและการรับรู้, ความจำ, ภาวะกลัวที่แคบและการเข้าถึงทางกายภาพ</td></tr>
+<tr><td><strong>9.3 Social Psychology</strong></td><td>ความรับผิดชอบระดับบุคคล/กลุ่ม, แรงจูงใจและการขาดแรงจูงใจ, แรงกดดันจากเพื่อน, ประเด็นวัฒนธรรม, การทำงานเป็นทีม, การบริหารจัดการและภาวะผู้นำ</td></tr>
+<tr><td><strong>9.4 Factors Affecting Performance</strong></td><td>ความฟิต/สุขภาพ, ความเครียด, แรงกดดันด้านเวลา, ภาระงานมาก/น้อยเกินไปและการบริหารภาระงาน, การขาดกำลังคน, การนอนหลับและความล้า/การทำงานเป็นกะ, แอลกอฮอล์ ยา และสารเสพติด</td></tr>
+<tr><td><strong>9.5 Physical Environment</strong></td><td>เสียงดังและควัน, แสงสว่าง, สภาพอากาศและอุณหภูมิ, การเคลื่อนไหวและแรงสั่นสะเทือน, สภาพแวดล้อมการทำงาน, <strong>การตระหนักรู้สถานการณ์ (Situational awareness)</strong></td></tr>
+</table>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ข้อกำหนดความรู้ (ต่อ)</span><span class="pnum">หน้า 3 / 144 (ต่อ)</span></div>
+<div class="translation" style="padding:18px 22px;">
+<table class="tf">
+<tr><th>บท</th><th>หัวข้อย่อยสำคัญ</th></tr>
+<tr><td><strong>9.6 Tasks</strong></td><td>งานที่ใช้แรงกาย, งานประจำและความประมาทเลินเล่อ (complacency), การตรวจสอบด้วยสายตา, ระบบที่ซับซ้อน, งานซ่อมบำรุงที่สำคัญและวิธีตรวจจับข้อผิดพลาด, เอกสารทางเทคนิค: การเข้าถึง การใช้งาน และคุณภาพ</td></tr>
+<tr><td><strong>9.7 Communication</strong></td><td>การสื่อสารภายในและระหว่างทีม, การส่งมอบงานระหว่างกะ, การบันทึกและจดบันทึกงาน, การรักษาความทันสมัยของความรู้, การเผยแพร่ข้อมูล</td></tr>
+<tr><td><strong>9.8 Human error</strong></td><td>แบบจำลองและทฤษฎีข้อผิดพลาด, ประเภทข้อผิดพลาดในงานซ่อมบำรุง, ผลกระทบของข้อผิดพลาด (เช่น อุบัติเหตุ), ข้อผิดพลาดระดับองค์กร, การหลีกเลี่ยงและจัดการข้อผิดพลาด</td></tr>
+<tr><td><strong>9.9 Safety Management</strong></td><td>การบริหารความเสี่ยง, การรายงานเหตุการณ์ (Occurrence reporting), วัฒนธรรมความปลอดภัย (Safety culture), วัฒนธรรมเป็นธรรม (Just culture), การระบุ/หลีกเลี่ยง/รายงานอันตราย, โปรแกรมปัจจัยมนุษย์ระดับองค์กร (ความเป็นมืออาชีพและความซื่อสัตย์, พฤติกรรมก่อข้อผิดพลาด, การรายงานข้อผิดพลาด, นโยบายวินัย, การสอบสวนข้อผิดพลาด, มาตรการแก้ไข, ผลป้อนกลับ, ความกล้าแสดงออก), การรับมือสถานการณ์ฉุกเฉิน</td></tr>
+<tr><td><strong>9.10 The 'Dirty Dozen' and risk-mitigation</strong></td><td>Dirty Dozen: 12 ข้อผิดพลาดด้านปัจจัยมนุษย์ที่พบบ่อยที่สุดในงานซ่อมบำรุง, วิธีลดความเสี่ยง (Risk-mitigation methods)</td></tr>
+</table>
+<div class="note">→ ข้อสอบข้อเขียนประกอบด้วยข้อสอบปรนัย (MCQ) จำนวน <strong>28 ข้อ</strong></div>
+</div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ระดับความรู้ตามข้อกำหนด EASA Part-66</span><span class="pnum">หน้า 4 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-004.jpg"></div>
+<div class="translation">
+<p>ข้อกำหนดความรู้พื้นฐานสำหรับ Category A1, B1, B2 และ B3 ถูกระบุด้วยตัวบ่งชี้ระดับความรู้ (Knowledge Level Indicators) เป็น Level 1, 2 หรือ 3 ดังนี้:</p>
+<h4>Level 1: ความคุ้นเคยกับองค์ประกอบหลักของหัวข้อ</h4>
+<ul>
+<li>ผู้สมัครควรคุ้นเคยกับองค์ประกอบพื้นฐานของหัวข้อ</li>
+<li>ผู้สมัครควรสามารถอธิบายหัวข้อทั้งหมดอย่างง่ายๆ โดยใช้คำศัพท์และตัวอย่างทั่วไป</li>
+<li>ผู้สมัครควรสามารถใช้คำศัพท์เฉพาะทางทั่วไปได้</li>
+</ul>
+<h4>Level 2: ความรู้ทั่วไปด้านทฤษฎีและปฏิบัติของหัวข้อ พร้อมความสามารถประยุกต์ใช้ความรู้นั้น</h4>
+<ul>
+<li>ผู้สมัครควรเข้าใจพื้นฐานทางทฤษฎีของหัวข้อ</li>
+<li>ผู้สมัครควรสามารถอธิบายหัวข้อโดยทั่วไป พร้อมยกตัวอย่างประกอบตามความเหมาะสม</li>
+<li>ผู้สมัครควรสามารถใช้สูตรคณิตศาสตร์ร่วมกับกฎทางฟิสิกส์ที่อธิบายหัวข้อนั้นได้</li>
+<li>ผู้สมัครควรสามารถอ่านและเข้าใจภาพร่าง แบบ และแผนผังที่อธิบายหัวข้อนั้นได้</li>
+<li>ผู้สมัครควรสามารถประยุกต์ใช้ความรู้ในทางปฏิบัติโดยใช้ขั้นตอนโดยละเอียดได้</li>
+</ul>
+<div class="note">→ <strong>ข้อสอบข้อเขียนของ Module 9 ประกอบด้วยข้อสอบปรนัย (MCQ) จำนวน 28 ข้อ</strong></div>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-1" class="module-section">
+<h2 class="section-title">Module 9.1 General</h2>
+
+<div class="toc">หัวข้อ: ภาพรวม, นิยามปัจจัยมนุษย์, ขอบเขตบุคคล/ทีม/องค์กร, ประวัติความเป็นมา (CRM/EASA), เป้าหมายหลัก, ความปลอดภัย (Fault→Event→Incident→Accident), สถิติ, กฎของเมอร์ฟี</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 5 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-005.jpg"></div>
+<div class="translation"><h4>บทที่ 9.1 — ทั่วไป (General)</h4><p>หน้าแบ่งบทเริ่มต้นหัวข้อ 9.1</p></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม (Overview)</span><span class="pnum">หน้า 6 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-006.jpg"></div>
+<div class="translation">
+<p>หัวข้อในบทนี้:</p>
+<ul>
+<li>ความจำเป็นในการคำนึงถึง<strong>ปัจจัยมนุษย์ (Human Factors)</strong> เมื่อปฏิบัติงานซ่อมบำรุง</li>
+<li>อุบัติการณ์ที่เกิดจากปัจจัยมนุษย์/ความผิดพลาดของมนุษย์ (Human Error)</li>
+<li><strong>กฎของเมอร์ฟี (Murphy's Law)</strong></li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">นิยาม (Definition) 1</span><span class="pnum">หน้า 7 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-007.jpg"></div>
+<div class="translation">
+<p>คำว่า <strong>“Human Factor”</strong> เป็นคำรวมที่หมายถึงปัจจัยด้านจิตวิทยา ความคิด (cognitive) และสังคม ที่มีอิทธิพลต่อระบบสังคม-เทคนิค (socio-technical systems) และระบบมนุษย์-เครื่องจักร (human-machine systems)</p>
+<p>สมรรถนะและความสามารถทางจิตใจและความคิดของมนุษย์มีความสำคัญไม่น้อยไปกว่าขีดจำกัดด้านสมรรถนะและความสามารถ เนื่องจากความสามารถของระบบเทคนิคพัฒนาและปรับปรุงอยู่ตลอดเวลา ทักษะของมนุษย์ทั่วไป เช่น การทำงานร่วมกันหรือทักษะการแก้ปัญหา (soft skills) จึงมีความสำคัญมากขึ้นเรื่อยๆ เพื่อหลีกเลี่ยงความผิดพลาดและอุบัติเหตุ</p>
+<h4>เป้าหมายของการนำปัจจัยมนุษย์มาพิจารณา:</h4>
+<ul>
+<li>เพื่อปรับสภาพแวดล้อมการทำงานด้านเทคนิคให้เหมาะสมกับมนุษย์มากที่สุด</li>
+<li>เพื่อกระจายงานและความรับผิดชอบระหว่างคนกับเครื่องจักรอย่างเหมาะสมที่สุด</li>
+<li>เพื่อให้เกิดปฏิสัมพันธ์ที่ราบรื่นระหว่างจุดเชื่อมต่อมนุษย์-มนุษย์-เครื่องจักร</li>
+<li>เพื่อลดผลกระทบจากความผิดพลาดของมนุษย์</li>
+<li>เพื่อเพิ่มความปลอดภัยและประสิทธิผลของระบบมนุษย์-เครื่องจักรโดยรวม</li>
+</ul>
+<div class="note">→ จุดมุ่งหมายคือทำให้ผู้เข้าอบรมตระหนักว่าความประพฤติที่ผิดพลาดของตนเองอาจก่อให้เกิดผลลัพธ์ที่ร้ายแรงได้ สาเหตุของอุบัติเหตุเพียง <strong>10–20%</strong> เท่านั้นที่มาจากปัจจัยทางเทคนิค จึงมีศักยภาพสูงมากในการป้องกันความผิดพลาด → <strong>80% มาจากปัจจัยมนุษย์!</strong> ➔ ต้องตระหนักรู้!</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">นิยาม (Definition) 2 — ขอบเขตบุคคล/ทีม/องค์กร</span><span class="pnum">หน้า 8 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-008.jpg"></div>
+<div class="translation">
+<p>ปัจจัยมนุษย์คือปัจจัยที่เกี่ยวข้องกับลักษณะเฉพาะทางสรีระ จิตวิทยา และสังคมของแต่ละบุคคล รวมถึงองค์ประกอบภายนอกตัวบุคคลในบริบทของกิจกรรมที่อาจเปลี่ยนพฤติกรรมไปในทางบวกหรือลบ ซึ่งส่งผลตามมาต่อกิจกรรมนั้นๆ</p>
+<p>หลักการพื้นฐานคือการปรับสภาพแวดล้อมให้เหมาะกับมนุษย์ในบริบทกิจกรรมของตน และในบางกรณีอาจต้องดำเนินมาตรการที่ช่วยให้มนุษย์ปรับตัวเข้ากับสภาพแวดล้อมและสถานที่ทำงานบางอย่างได้ดีขึ้น ความรู้เกี่ยวกับสมรรถนะของมนุษย์ช่วยให้แต่ละบุคคลตระหนักถึงความสามารถและข้อจำกัดของตนเองได้ดีขึ้น</p>
+<table class="tf">
+<tr><th>ระดับ</th><th>องค์ประกอบ</th></tr>
+<tr><td><strong>บุคคล (Individual)</strong></td><td>ความสนใจ/การรับรู้, คิด-ตัดสินใจ-กระทำ, อารมณ์, แรงจูงใจ</td></tr>
+<tr><td><strong>ทีม (Team)</strong></td><td>ความร่วมมือและการประสานงาน, แบบจำลองความคิดร่วมกัน, การสื่อสาร (ข้อมูลและปฏิสัมพันธ์), การข้ามลำดับชั้นบังคับบัญชา</td></tr>
+<tr><td><strong>องค์กร (Organisation)</strong></td><td>นโยบาย/วัฒนธรรมองค์กร, การบริหารจัดการ/การกระจายความรับผิดชอบ, การวางแผน, <strong>การบริหารจัดการความปลอดภัย (Safety Management)</strong></td></tr>
+</table>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ปัจจัยมนุษย์คืออะไร?</span><span class="pnum">หน้า 9 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-009.jpg"></div>
+<div class="translation">
+<ul>
+<li>อิทธิพลจากปัญหาทางจิตใจหรือร่างกาย</li>
+<li>ขาดสมาธิ</li>
+<li>ปัญหาเฉพาะขององค์กรและบริษัท</li>
+<li>ขาดความใส่ใจ ขาดการตอบสนอง และการตีความผิดพลาด</li>
+<li>การสันนิษฐานสถานการณ์ผิดพลาด</li>
+<li>ปัญหาการสื่อสาร</li>
+<li>ความประมาท (อ่าน/ละเลยสัญญาณเตือนผิดพลาด)</li>
+<li>การละเลยหรือไม่ปฏิบัติตามเอกสารทางเทคนิค/ระเบียบข้อบังคับ</li>
+<li>ความเครียดหรือภาระงานที่มากเกินไป</li>
+<li>ความรู้เกี่ยวกับขั้นตอนหรือรุ่นอากาศยานไม่เพียงพอ</li>
+<li>ความตระหนักรู้สถานการณ์ไม่เพียงพอ หรือตีความความเสี่ยงผิดพลาด</li>
+</ul>
+<div class="note">➔ <strong>ทุกคนได้รับผลกระทบ!</strong></div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ประวัติความเป็นมา (History)</span><span class="pnum">หน้า 10 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-010.jpg"></div>
+<div class="translation">
+<p>แม้สายการบินใหญ่จะเริ่มพิจารณาแนวคิดปัจจัยมนุษย์ตั้งแต่ช่วงทศวรรษ 1980 เนื่องจากความผิดพลาดของนักบิน แต่ข้อกำหนดทางกฎหมายที่บังคับใช้หลักการปัจจัยมนุษย์กับทีมช่างเทคนิคเพิ่งถูกนำมาใช้อย่างเป็นทางการช่วงปลายทศวรรษ 1990 (JAR OPS) ภายใต้ชื่อ <strong>Crew Resource Management (CRM)</strong></p>
+<p>ต่อมาจึงเกิดข้อกำหนดแรกสำหรับองค์กรซ่อมบำรุง แนวคิดปัจจัยมนุษย์บางประการ เช่น สภาพการทำงาน การฝึกอบรมทบทวนด้านปัจจัยมนุษย์ ภายใต้ JAR66 (เช่น Human Factors – Module 9)</p>
+<p>เมื่อ EASA ก่อตั้งขึ้นใหม่ (ตั้งแต่ปี 2002) กฎระเบียบได้รับการปรับปรุง และการฝึกอบรมด้านปัจจัยมนุษย์เกี่ยวกับงานซ่อมบำรุงทั้งในรูปแบบการฝึกอบรมเบื้องต้นและการฝึกอบรมทบทวนกลายเป็นมาตรฐาน การฝึกอบรมปัจจัยมนุษย์ปัจจุบันมีอยู่ในทุกส่วนของงานด้านความสมควรเดินอากาศต่อเนื่อง (Continuing Airworthiness)</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">เป้าหมายหลัก (Main Objectives)</span><span class="pnum">หน้า 11 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-011.jpg"></div>
+<div class="translation">
+<p>ปัจจัยมนุษย์มีบทบาทสำคัญในการทำความเข้าใจ ตรวจจับ หลีกเลี่ยง วิเคราะห์ และบรรเทาความเสี่ยงและข้อผิดพลาด ในบริบทของความสมควรเดินอากาศต่อเนื่องและงานซ่อมบำรุง เป้าหมายคือการหลีกเลี่ยงเหตุการณ์ไม่พึงประสงค์และความไม่สอดคล้อง เพื่อพัฒนาความปลอดภัยการบิน</p>
+<div class="note">แม้ปัจจัยมนุษย์จะมีประโยชน์อย่างยิ่งต่อการจัดการข้อผิดพลาด แต่สิ่งสำคัญคือไม่ควรจำกัดหัวข้อนี้ไว้เพียงแค่แนวคิดเรื่องข้อผิดพลาดเท่านั้น</div>
+<p>คำว่า <strong>“ปัจจัยมนุษย์”</strong> ต้องถูกเข้าใจในเบื้องต้นว่าเป็นแนวคิดเชิงบวก หมายถึงการทำงานที่ดีขององค์กร ความราบรื่นของกระบวนการ คุณภาพของผลิตภัณฑ์/บริการ และคุณภาพชีวิตการทำงานของพนักงาน</p>
+<p class="en">เชื่อมโยงกับ <strong>SMS (Safety Management System)</strong></p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความปลอดภัย (Safety)</span><span class="pnum">หน้า 12 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-012.jpg"></div>
+<div class="translation">
+<p>ลำดับการพัฒนาของปัญหาด้านความปลอดภัย:</p>
+<p style="text-align:center; font-size:1.05rem;"><strong>ศักยภาพความเสี่ยง (RISK Potential)</strong> → <strong>เหตุการณ์ (Event)</strong> → <strong>อุบัติการณ์ (Incident)</strong> → <strong>อุบัติเหตุ (Accident)</strong></p>
+<p class="en">ความเสี่ยงที่แฝงอยู่หากไม่ได้รับการจัดการ สามารถลุกลามผ่านเหตุการณ์และอุบัติการณ์ จนกลายเป็นอุบัติเหตุร้ายแรงได้ในที่สุด</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">สถิติ (Statistics)</span><span class="pnum">หน้า 13 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-013.jpg"></div>
+<div class="translation">
+<p>หน้านี้อ้างอิงข้อมูลสถิติจาก <strong>EASA EPAS (European Plan for Aviation Safety)</strong> และรายการอุบัติเหตุ/อุบัติการณ์ (Accident List) เพื่อแสดงแนวโน้มสาเหตุของอุบัติเหตุทางการบิน — ดูภาพต้นฉบับประกอบสำหรับกราฟและตัวเลขโดยละเอียด</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">เหตุการณ์ที่เคยเกิดขึ้น (Things Occurred)</span><span class="pnum">หน้า 14 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-014.jpg"></div>
+<div class="translation">
+<p>ตัวอย่างภาพเหตุการณ์/อุบัติการณ์จริงที่เคยเกิดขึ้นในงานซ่อมบำรุงอากาศยาน เพื่อกระตุ้นให้ผู้เรียนตระหนักว่าความผิดพลาดเล็กน้อยสามารถนำไปสู่ผลลัพธ์ที่ไม่คาดคิดได้ — ดูภาพต้นฉบับประกอบ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">กฎของเมอร์ฟี (Murphy's Law)</span><span class="pnum">หน้า 15 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-015.jpg"></div>
+<div class="translation">
+<p style="text-align:center; font-size:1.05rem;">→ <strong>สิ่งใดก็ตามที่มีโอกาสผิดพลาดได้ ย่อมจะผิดพลาดในที่สุด</strong><br><span class="en">"Anything that can go wrong will go wrong."</span></p>
+<p>กฎของเมอร์ฟีเป็นภูมิปัญญาที่มีที่มาจากวิศวกรชาวอเมริกัน <strong>Edward A. Murphy Jr.</strong> ซึ่งกล่าวถึงแหล่งที่มาของข้อผิดพลาดในระบบที่ซับซ้อน ถูกนำมาใช้ในเทคโนโลยีสมัยใหม่ในฐานะมาตรฐานเชิงประจักษ์หรือความรู้เชิงประสบการณ์สำหรับกลยุทธ์ป้องกันข้อผิดพลาด เช่น การประกันคุณภาพ หลักการ fail-safe เช่น ความน่าเชื่อถือผ่านระบบสำรอง (redundant systems) ซึ่งทำให้ “กฎ” ที่ดูเหมือนขบขันนี้มีพื้นฐานทางวิทยาศาสตร์รองรับ</p>
+<ul>
+<li>ไม่มีอะไรง่ายอย่างที่มันดูเลย</li>
+<li>ทุกอย่างใช้เวลานานกว่าที่คิดเสมอ</li>
+<li>ถ้ามีหลายสิ่งที่เสี่ยงจะผิดพลาด สิ่งที่จะสร้างความเสียหายมากที่สุดคือสิ่งที่จะผิดพลาด</li>
+<li>ถ้าสมมติว่าบางสิ่งอาจผิดพลาดได้ 2 ทาง และป้องกันทั้งสองทางแล้ว จู่ๆ ทางที่ 3 ก็จะปรากฏขึ้นมา</li>
+<li>ทุกวิธีแก้ปัญหาจะนำมาซึ่งปัญหาใหม่อย่างน้อย 2 อย่างเสมอ</li>
+<li>เป็นไปไม่ได้ที่จะมั่นใจในสิ่งใดได้อย่างแน่นอน เพราะมนุษย์ช่างมีความคิดสร้างสรรค์เกินไป</li>
+</ul>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-2" class="module-section">
+<h2 class="section-title">Module 9.2 Human Performance and Limitations</h2>
+
+<div class="toc">หัวข้อ: การมองเห็น/การได้ยิน, ภาพลวงตา, กายวิภาคสมอง, การประมวลผลข้อมูล, ความจำ, ความสนใจและการรับรู้, โรคกลัว, การเข้าถึงทางกายภาพ<br><em>หมายเหตุ: หัวข้อ Situation Awareness ย้ายไปอยู่ในบท 9.5 Physical Environment ของฉบับปรับปรุงนี้</em></div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 16 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-016.jpg"></div>
+<div class="translation"><h4>บทที่ 9.2 — สมรรถนะและข้อจำกัดของมนุษย์</h4></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม (Overview)</span><span class="pnum">หน้า 17 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-017.jpg"></div>
+<div class="translation">
+<ul>
+<li>การมองเห็นและการได้ยิน (Vision &amp; Hearing)</li>
+<li>การประมวลผลข้อมูล (Information processing)</li>
+<li>ความสนใจและการรับรู้ (Attention and perception)</li>
+<li>ความจำ (Memory)</li>
+<li>ภาวะกลัวที่แคบและการเข้าถึงทางกายภาพ (Claustrophobia and physical access)</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การรับรู้ทางประสาทสัมผัส – ดวงตา</span><span class="pnum">หน้า 18 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-018.jpg"></div>
+<div class="translation">
+<p><strong>“การมองเห็น” คืออะไร? — กายวิภาคและการทำงานของการมองเห็น:</strong> การมองเห็นคือการที่แสงตกกระทบดวงตา กระตุ้นตัวรับแสงที่ไวต่อแสงและกระตุ้นเส้นประสาทให้ส่งสัญญาณไปยังสมอง</p>
+<p>แสงเข้าสู่ดวงตาผ่านรูม่านตาและเลนส์ เลนส์รวมลำแสงและสร้างภาพที่ชัดเจนของสิ่งแวดล้อมบนจอตา (retina) ซึ่งอยู่ที่ผนังด้านหลังของลูกตา จอตาเป็นชั้นของตัวรับแสงที่ละเอียดอ่อนมากและเซลล์ประสาทบางๆ ที่ส่งความรู้สึกของแสงไปยังสมอง ตัวรับแสงตอบสนองต่อแสงและส่งสัญญาณผ่านเส้นใยประสาทบางๆ ไปยังเส้นประสาทตา ซึ่งนำสัญญาณไปยังสมอง สมองบางส่วนรับและประมวลผลสัญญาณเหล่านี้ ทำให้เรารับรู้ (“เห็น”) ภาพนั้น</p>
+<p>ขึ้นอยู่กับอายุของแต่ละบุคคล ดวงตาต้องใช้เวลาถึง <strong>30 นาที</strong> เพื่อปรับตัวกับสภาพแสงที่มืดกว่า ในขณะที่การปรับตัวในที่สว่างใช้เวลาเพียงไม่กี่วินาที กระบวนการนี้เรียกว่า <strong>Visual Adaptation</strong></p>
+<div class="note">→ เมื่อทำงานในห้องที่มีแสงน้อย ควรจัดให้มีแสงสว่างที่ดีเพียงพอ!</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การรับรู้ทางประสาทสัมผัส – ภาพลวงตา</span><span class="pnum">หน้า 19 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-019.jpg"></div>
+<div class="translation">
+<p>ข้อมูลภาพจากโลกภายนอกไปถึงศูนย์การมองเห็นในสมองผ่านจอตา อย่างไรก็ตาม การมองเห็นที่คมชัดเกิดขึ้นได้เฉพาะในส่วนเล็กๆ ของจอตาเท่านั้น เมื่อมองภาพหนึ่ง ดวงตาจะเคลื่อนไหวเฉพาะจุด ภาพเบลอระหว่างการเคลื่อนไหวของตาจะถูกสมองกรองออกโดยไม่รู้ตัว</p>
+<p>จากความประทับใจทางสายตาต่างๆ สัญญาณจะไปถึงส่วนหนึ่งของทาลามัส แล้วไปยังศูนย์การมองเห็นหลักที่ท้ายทอย (occipital pole) แม้กระทั่งในระดับนี้ก็ยังมี feedback loop ทำให้มีเพียง ~10% ของเส้นใยประสาทในศูนย์การมองเห็นที่มาจากตาโดยตรง ส่วนที่เหลือเป็นการประมวลผลล่วงหน้าที่สำคัญโดยอาศัยพารามิเตอร์ทางชีวภาพและประสบการณ์ที่ผ่านมา</p>
+<p>กล่าวโดยสรุป สมองสร้างภาพที่เห็นขึ้นเองจากสัญญาณที่ค่อนข้างอ่อน กลไกนี้จึงเสี่ยงต่อการถูกรบกวน ซึ่งแสดงให้เห็นผ่านภาพลวงตา (optical illusions) จากนั้นสมองจะประมวลผลข้อมูลต่อไปและคำนวณการเปลี่ยนแปลงที่คาดว่าจะเกิดขึ้นในอนาคต</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การรับรู้ทางประสาทสัมผัส – หู (การได้ยิน)</span><span class="pnum">หน้า 20 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-020.jpg"></div>
+<div class="translation">
+<p>คลื่นเสียงเดินทางผ่านช่องหูมาถึงแก้วหูของเรา แก้วหูเริ่มสั่นสะเทือน การสั่นสะเทือนนี้ถูกส่งต่อผ่านกระดูกค้อน ทั่ง และโกลน เข้าสู่คอเคลียที่มีของเหลวบรรจุอยู่</p>
+<p>การสั่นสะเทือนทำให้เยื่อบางชนิดเปลี่ยนรูปทางกล เซลล์ขนเล็กๆ บนเยื่อจะตอบสนองต่อการสั่นสะเทือนเหล่านี้ แล้วส่งข้อมูลตำแหน่งและระดับการเปลี่ยนรูปไปยังเซลล์ประสาท ซึ่งแปลงเป็นสัญญาณแม่เหล็กไฟฟ้าและส่งต่อไปยังสมองของเรา</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การรับรู้ทางประสาทสัมผัส – สมอง (กายวิภาค)</span><span class="pnum">หน้า 21 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-021.jpg"></div>
+<div class="translation">
+<p>จริงๆ แล้วการพูดถึง “สมอง” เพียงส่วนเดียวไม่ถูกต้องนัก เพราะแท้จริงมี <strong>4 ส่วนของสมอง</strong> ที่พัฒนาซับซ้อนขึ้นตามวิวัฒนาการ ทั้ง 4 ส่วนเชื่อมโยงและทำงานร่วมกัน:</p>
+<ul>
+<li><strong>ก้านสมอง (Brain stem)</strong> หรือ “สมองสัตว์เลื้อยคลาน” — ส่วนเก่าแก่ที่สุด รับผิดชอบการเอาชีวิตรอดและสัญชาตญาณพื้นฐาน จุดแข็งคือการกระทำ (action) ควบคุมกระบวนการอัตโนมัติ เช่น การเต้นของหัวใจ การหายใจ และเมแทบอลิซึม</li>
+<li><strong>สมองน้อย (Cerebellum)</strong> — อายุน้อยกว่า รับผิดชอบการทรงตัวและการเคลื่อนไหว รวมถึงการประสานงานของกล้ามเนื้อ</li>
+<li><strong>ไดเอนเซฟาลอน (Diencephalon)</strong> — ควบคุมกระบวนการทางกายและจิตใจจำนวนมาก เป็นจุดรวมและส่งต่อข้อมูลจากอวัยวะรับความรู้สึกทั้งหมด และควบคุมวงจรหลับ-ตื่น</li>
+<li><strong>สมองใหญ่ (Cerebrum)</strong> — ส่วนใหม่ที่สุด เก็บความจำและกระบวนการคิดขั้นสูง</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การรับรู้ทางประสาทสัมผัส – สมอง (หน้าที่)</span><span class="pnum">หน้า 22 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-022.jpg"></div>
+<div class="translation">
+<p>สมองมีหน้าที่รับ ประมวลผล และตอบสนองต่อสิ่งเร้า ตัวรับความรู้สึก (Receptors) เช่น อวัยวะรับสัมผัส จะรับสิ่งเร้าและส่งเป็นสัญญาณเข้ารหัสทางเคมีไฟฟ้าไปยังระบบประสาทส่วนกลาง ซึ่งมีสมองเป็นศูนย์ควบคุมหลัก</p>
+<p>สัญญาณที่ได้รับจะถูกประมวลผลตามรูปแบบบางอย่าง และหากจำเป็นจะส่งสัญญาณตอบสนองไปยัง effector (กล้ามเนื้อ ต่อม ฯลฯ) การประมวลผลข้อมูลในสมองเป็นแบบขนานสูง อาศัยเครือข่ายเซลล์ประสาทที่ซับซ้อนซึ่งสามารถแลกเปลี่ยนข้อมูลกันได้พร้อมกัน ข้อมูลถูกส่งต่อในรูปแบบของรูปแบบการกระตุ้น (activation patterns) ผ่านการเชื่อมต่อระหว่างเซลล์ประสาท</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การประมวลผลทางประสาทสัมผัส – ความจำ</span><span class="pnum">หน้า 23 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-023.jpg"></div>
+<div class="translation">
+<h4>ข้อมูลภายนอกเข้าสู่ความจำของเราได้อย่างไร?</h4>
+<p>ชีววิทยาสมัยใหม่ใช้แบบจำลอง “การเก็บความจำเป็นขั้นตอน (gradual memorization)”: ข้อมูลมาถึงเราในรูปแบบสิ่งเร้าที่รับรู้ได้ทางประสาทสัมผัส อาจเป็นสิ่งเร้าทางสายตา การได้ยิน การสัมผัส กลิ่น หรือรส ปริมาณข้อมูลที่รับได้ขึ้นกับชนิดของสิ่งเร้า เช่น กลิ่นรับได้ประมาณ 20 บิต/วินาที ขณะที่ภาพรับได้ถึงประมาณ 10 ล้านบิต</p>
+<p>สิ่งเร้าที่รับรู้ได้จะกระทบเซลล์รับความรู้สึก (sensor) ซึ่งส่งต่อเป็นสัญญาณกระตุ้นไฟฟ้าไปยังเซลล์ประสาท (neuron) และปลายเส้นใยประสาทของมัน คือ <strong>ไซแนปส์ (synapse)</strong> (ความจำระยะสั้นมากๆ)</p>
+<p>สัญญาณกระตุ้นไฟฟ้าจะเริ่มวนเวียนระหว่างไซแนปส์ของเซลล์ประสาทต่างๆ (<strong>ความจำระยะสั้น</strong>) โดยวนซ้ำในเส้นทางเฉพาะซ้ำๆ ในเครือข่ายเซลล์ประสาท ทิ้งร่องรอยโมเลกุลเฉพาะที่ถูกพิมพ์ทางเคมีไว้ในสมอง เส้นทางประสาทซึ่งในตอนแรกยังไม่เชื่อมต่อแน่นหนา จะแข็งแรงขึ้น เกิดการเชื่อมต่อถาวรและกลายเป็น<strong>ความจำระยะยาว</strong>ของเรา</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แบบจำลองการประมวลผลข้อมูล (แผนภาพ)</span><span class="pnum">หน้า 24 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-024.jpg"></div>
+<div class="translation">
+<p>แผนภาพแสดงกระบวนการประมวลผลข้อมูลของสมอง ตั้งแต่รับสิ่งเร้าทางประสาทสัมผัส ผ่านความจำระยะสั้น จนถึงการตัดสินใจและการกระทำ โดยได้รับอิทธิพลจากอารมณ์ แรงจูงใจ ความรู้ ทักษะ และกฎเกณฑ์ที่มีอยู่ — ดูภาพต้นฉบับประกอบ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความสนใจและการรับรู้</span><span class="pnum">หน้า 25 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-025.jpg"></div>
+<div class="translation">
+<p><strong>ความสนใจ (Attention)</strong> เชื่อมโยงใกล้ชิดกับจิตสำนึกของเรา การให้ความสนใจต่อสิ่งเร้าหรือความคิดหนึ่งๆ เป็นเงื่อนไขที่จำเป็นให้เราตระหนักถึงมัน อย่างไรก็ตาม สมองยังคงประมวลผลสิ่งเร้าที่เราไม่ได้ให้ความสนใจโดยตรงด้วย เพียงแต่การประมวลผลนี้เกิดขึ้นโดยไม่รู้ตัว</p>
+<p>ความสนใจจำเป็นสำหรับ: การปรับทิศทาง (Orientation) และการคัดเลือก (Selection ผ่านการกรอง)</p>
+<div class="note">→ <strong>การรับรู้ไม่ใช่การสะท้อนความเป็นจริงแบบ 1 ต่อ 1!</strong></div>
+<ul>
+<li>การรับรู้คือการสร้างภาพของสภาพแวดล้อมปัจจุบัน แล้วผสานเข้ากับขอบเขตความคาดหวังของตนเอง</li>
+<li>การรับรู้รวมความรู้สึกทางประสาทสัมผัสเข้ากับประสบการณ์ที่มีอยู่เดิม</li>
+<li>แรงจูงใจและความคาดหวังช่วยกำหนดสิ่งที่เรารับรู้ — ความผิดปกติในการรับรู้มักเป็นพื้นฐานของข้อผิดพลาดในการกระทำ!</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">โรคกลัว (Phobias)</span><span class="pnum">หน้า 26 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-026.jpg"></div>
+<div class="translation">
+<div class="note">→ <strong>โรคกลัว (Phobia)</strong> คือความกลัวต่อวัตถุหรือสถานการณ์ใดสถานการณ์หนึ่งโดยเฉพาะ</div>
+<p>ผู้ที่มีอาการ<strong>กลัวที่แคบ (Claustrophobia)</strong> ควรพยายามค่อยๆ ควบคุมความกลัวของตนเอง (เช่น ผ่านการฝึกฝน)</p>
+<p>ไม่ว่าในกรณีใด ต้องสื่อสารเรื่องความกลัวนี้ให้เพื่อนร่วมงานและหัวหน้างานทราบ!</p>
+<p style="text-align:center; color:var(--accent2); font-weight:bold;">→ การสื่อสารคือกุญแจสำคัญ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การเข้าถึงทางกายภาพ (Physical Access)</span><span class="pnum">หน้า 27 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-027.jpg"></div>
+<div class="translation">
+<p><strong>การเข้าถึงได้ (Accessibility)</strong> หมายถึงระดับความง่ายในการเข้าถึงบางสิ่ง — ในบริบทงานซ่อมบำรุง หมายถึงความสามารถในการเข้าถึงจุดทำงานหรือส่วนประกอบของอากาศยานได้อย่างปลอดภัยและมีประสิทธิภาพ</p>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-3" class="module-section">
+<h2 class="section-title">Module 9.3 Social Psychology</h2>
+
+<div class="toc">หัวข้อ: ความรับผิดชอบ (บุคคล/กลุ่ม), แรงจูงใจและการขาดแรงจูงใจ, แรงกดดันจากเพื่อน, พฤติกรรมในกลุ่ม, Groupthink, การทำงานเป็นทีม, ประเด็นวัฒนธรรม, การบริหารจัดการและภาวะผู้นำ</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 28 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-028.jpg"></div>
+<div class="translation"><h4>บทที่ 9.3 — จิตวิทยาสังคม</h4></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม</span><span class="pnum">หน้า 29 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-029.jpg"></div>
+<div class="translation">
+<ul>
+<li>ความรับผิดชอบ (Accountability &amp; responsibility): ระดับบุคคลและกลุ่ม</li>
+<li>แรงจูงใจและการขาดแรงจูงใจ (Motivation and de-motivation)</li>
+<li>แรงกดดันจากเพื่อน (Peer pressure)</li>
+<li>ประเด็นวัฒนธรรม การทำงานเป็นทีม ("Culture" issues, Team working)</li>
+<li>การบริหารจัดการ การกำกับดูแล และภาวะผู้นำ (Management, supervision and leadership)</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">Accountability &amp; Responsibility</span><span class="pnum">หน้า 30 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-030.jpg"></div>
+<div class="translation">
+<p><strong>Accountability</strong> มักใช้กับบุคคล เช่น ผู้บริหารที่รับผิดชอบ (accountable manager) ส่วน <strong>Responsibility</strong> ใช้ได้ทั้งกับบุคคลและทีม</p>
+<p>ความรับผิดชอบ (responsibility) อาจถูกจำกัดเมื่อการกระทำนั้นเป็นไปตามคำสั่ง แต่ยังคงมีความรับผิดชอบร่วมกันสำหรับความรับผิดชอบที่ถูกส่งต่อ ซึ่งครอบคลุมถึงความสำเร็จของความรับผิดชอบองค์รวมร่วมกันด้วย</p>
+<p>ประเภทและระดับของความรับผิดชอบถูกกำหนดโดยบทบาททางสังคมที่หลากหลาย ระดับชั้นการบังคับบัญชา และขอบเขตกิจกรรมต่างๆ ดังนั้นแนวคิดเรื่องความรับผิดชอบจึงต้องพิจารณาตามสถานการณ์ในแต่ละกรณี</p>
+<p>คำว่า <strong>“การรับผิดชอบ (taking responsibility)”</strong> มีความหมาย 2 ด้าน:</p>
+<div class="note">→ ต้องตระหนักว่าตนเองและความรับผิดชอบภายในกลุ่มเกี่ยวข้องกับตนเองอย่างไรและมากน้อยเพียงใด<br>→ ต้องกระทำให้สอดคล้องเพื่อทำหน้าที่รับผิดชอบนั้นให้สำเร็จ</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความรับผิดชอบ (Responsibility)</span><span class="pnum">หน้า 31 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-031.jpg"></div>
+<div class="translation">
+<p><strong>คำว่า “รับผิดชอบต่อบางสิ่ง” หมายถึงอะไร?</strong></p>
+<ul>
+<li>ความซื่อสัตย์และความน่าเชื่อถือ (Integrity &amp; Reliability)</li>
+<li>การตระหนักรู้สถานการณ์ (Situational awareness)</li>
+<li>ความมีสติรอบคอบ (Conscientiousness)</li>
+<li>ความจริงใจ (Sincerity)</li>
+<li>การเป็นแบบอย่างที่ดี (Role model function)</li>
+<li>ความขยันหมั่นเพียร (Diligence)</li>
+<li>ความมีระเบียบ (Sense of order)</li>
+</ul>
+<div class="note">→ <strong>ความรับผิดชอบต่องานที่ตนเองลงมือทำเอง ไม่สามารถมอบหมายให้ผู้อื่นแทนได้!</strong></div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความรับผิดชอบในงานซ่อมบำรุงอากาศยาน</span><span class="pnum">หน้า 32 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-032.jpg"></div>
+<div class="translation">
+<p>สิ่งที่คาดหวังจากพนักงานที่มีคุณสมบัติในงานซ่อมบำรุงอากาศยาน ได้แก่ วินัย คุณสมบัติที่เหมาะสม วิจารณญาณ ความคิดริเริ่ม และความสามารถประเมินตนเอง — ดูรายละเอียดในภาพต้นฉบับประกอบ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แรงจูงใจ (Motivation) 1</span><span class="pnum">หน้า 33 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-033.jpg"></div>
+<div class="translation">
+<p><strong>แรงจูงใจ (Motivation)</strong> คือผลรวมของแรงขับ (motives) ทั้งหมดที่นำไปสู่ความพร้อมในการกระทำ กล่าวอีกนัยหนึ่งคือ การไล่ตามเป้าหมายหรือสิ่งที่พึงปรารถนาของมนุษย์ โดยอาศัยกิจกรรมทางอารมณ์และระบบประสาท</p>
+<table style="width:100%;border-collapse:collapse;margin:10px 0;font-size:0.9rem;">
+<tr><th style="border:1px solid var(--border);padding:6px;background:var(--panel2);color:var(--accent2);text-align:left;">คำศัพท์</th><th style="border:1px solid var(--border);padding:6px;background:var(--panel2);color:var(--accent2);text-align:left;">ความหมาย</th></tr>
+<tr><td style="border:1px solid var(--border);padding:6px;">แรงขับ (Motive)</td><td style="border:1px solid var(--border);padding:6px;">สาเหตุของพฤติกรรม</td></tr>
+<tr><td style="border:1px solid var(--border);padding:6px;">แรงจูงใจ (Motivation)</td><td style="border:1px solid var(--border);padding:6px;">ปฏิสัมพันธ์ของแรงขับทั้งหมดที่ก่อให้เกิดพฤติกรรมหนึ่งๆ</td></tr>
+<tr><td style="border:1px solid var(--border);padding:6px;">กระตุ้น (Motive)</td><td style="border:1px solid var(--border);padding:6px;">มาจากภาษาละติน "movere" (ทำให้เคลื่อนไหว) หมายถึงการกระตุ้นแรงจูงใจ คือการกระตุ้นแรงขับที่มีอยู่แล้วด้วยสิ่งจูงใจที่เหมาะสม</td></tr>
+</table>
+<div class="note">→ <strong>แรงจูงใจคือพฤติกรรมที่มุ่งสู่เป้าหมาย</strong></div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แรงจูงใจภายใน vs ภายนอก</span><span class="pnum">หน้า 34 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-034.jpg"></div>
+<div class="translation">
+<p>ตามทฤษฎีแบ่งแรงจูงใจออกเป็น 2 ประเภทหลัก:</p>
+<h4>แรงจูงใจภายใน (Intrinsic Motivation)</h4>
+<p>เป็นแรงจูงใจภายในที่เกิดขึ้นเองของแต่ละบุคคล ผู้คนรู้สึกสนุกกับการทำกิจกรรมบางอย่างเพียงเพราะมันสนุก มีความหมาย ท้าทาย หรือน่าสนใจในตัวมันเอง</p>
+<h4>แรงจูงใจภายนอก (Extrinsic Motivation)</h4>
+<p>เป็นรูปแบบแรงจูงใจที่เกิดจากสิ่งเร้าภายนอก เช่น ความต้องการรางวัล (ค่าตอบแทนจากงาน) หรือการหลีกเลี่ยงการลงโทษ (ผลสอบที่ไม่ดี) ต่างจากแรงจูงใจภายใน งานไม่ได้ทำเพื่อตัวมันเองหรือจากความคิดริเริ่มของตนเอง แต่ทำโดยคาดหวังเงินหรือการยอมรับ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แรงจูงใจระยะยาว — เป็นไปได้หรือไม่?</span><span class="pnum">หน้า 35 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-035.jpg"></div>
+<div class="translation">
+<p>ความจริงคือแรงจูงใจไม่คงที่ตลอดเวลา บางครั้งมีแรงจูงใจสูงและเริ่มดำเนินการตามเป้าหมาย แต่แล้วก็หมดไฟและไม่คืบหน้าเลย ความขึ้นลงเหล่านี้ที่เกิดขึ้นระหว่างการไล่ตามเป้าหมายเป็นเรื่องปกติอย่างสมบูรณ์</p>
+<p>อย่างไรก็ตาม การวิเคราะห์สถานการณ์สามารถช่วยให้คุณค้นพบว่าอะไรมีผลกระตุ้นหรือลดทอนแรงจูงใจของคุณเป็นการส่วนตัว โดยการจดบันทึกว่าสถานการณ์ใดกระตุ้นและสถานการณ์ใดลดทอนแรงจูงใจของคุณ การวิเคราะห์แบบนี้ช่วยให้คุณปรับตัวเข้ากับความต้องการและความปรารถนาส่วนบุคคลได้ดีขึ้นในอนาคต</p>
+<p>สิ่งสำคัญคือต้องวิเคราะห์ด้วยว่าแรงจูงใจภายใน แรงจูงใจภายนอก หรือทั้งสองอย่างรวมกัน คือทางออกที่เหมาะกับคุณ หากต้องการรักษาแรงจูงใจในระยะยาวเพื่อให้ได้ผลลัพธ์ที่ดีที่สุดในชีวิต ควรตระหนักว่าแท้จริงแล้วอะไรเป็นแรงจูงใจของคุณ และพยายามจัดให้แรงขับภายในอยู่เหนือแรงขับภายนอก</p>
+<p>ผลของสิ่งจูงใจภายนอกดำเนินไปต่างจากแรงกระตุ้นภายใน เพราะแรงจูงใจภายนอกจะลดลงอย่างมีนัยสำคัญตามเวลา ต้องรักษาผลไว้ด้วยการต่ออายุหรือเปลี่ยนสิ่งจูงใจ (เช่น เพิ่ม “ปริมาณ” ผ่านรางวัลทางการเงินที่สูงขึ้น หรือต้องสร้างสิ่งจูงใจใหม่) ผู้ที่กระทำจากแรงขับภายในเท่านั้นจะมีแรงจูงใจที่จำเป็นในระยะยาวเพื่อไล่ตามและบรรลุเป้าหมายของตนในที่สุด</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">วิธีสร้างแรงจูงใจให้ตนเองและผู้อื่น</span><span class="pnum">หน้า 36 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-036.jpg"></div>
+<div class="translation">
+<ul>
+<li>ตระหนักถึงด้านดีของสิ่งต่างๆ</li>
+<li>รับรู้ความสามารถของตนเอง — “ฉันทำสิ่งนี้ได้ดี!”</li>
+<li>ปิดช่องว่างข้อมูล — อย่าให้ข่าวลือนำทาง ให้ถาม/ทำความเข้าใจให้ชัดเจน</li>
+<li>อย่าโกรธ — เปลี่ยนแปลง</li>
+<li>มีส่วนร่วมเชิงรุกในทีมหรือกระบวนการทำงาน</li>
+<li>คิดระยะยาว — พัฒนาตนเองต่อเนื่อง</li>
+<li>มองเห็นแม้กระทั่งความสำเร็จเล็กๆ น้อยๆ</li>
+<li>ให้การยอมรับผู้อื่นอย่างจริงใจ</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แรงกดดันจากเพื่อน (Peer Pressure)</span><span class="pnum">หน้า 37 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-037.jpg"></div>
+<div class="translation">
+<p><strong>แรงกดดันจากเพื่อน (Peer Pressure)</strong> หรือที่เรียกว่าแรงกดดันจากกลุ่มหรือความสอดคล้อง (conformity) เป็นตัวกระตุ้นพฤติกรรมหรือทัศนคติของบุคคลภายในกลุ่ม มักส่งผลเฉพาะภายในกลุ่มที่จำกัด และทำให้พฤติกรรมปรับตามบรรทัดฐานของกลุ่ม โดยเฉพาะเมื่อถือเป็นเงื่อนไขของการเป็นสมาชิก</p>
+<p>ประสิทธิผลของแรงกดดันให้สอดคล้องยังเห็นได้จากการปรับตัวตามศีลธรรมทางสังคมและความคิดเห็นสาธารณะที่แพร่หลาย</p>
+<p><strong>ความสอดคล้อง (Conformity)</strong> หมายถึงการเปลี่ยนแปลงการตัดสินหรือพฤติกรรมเพื่อสนับสนุนการตัดสินของสมาชิกส่วนใหญ่ในกลุ่ม</p>
+<div class="note">→ พฤติกรรมของกลุ่มอาจไม่ถูกต้องเสมอไป?</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">อิทธิพลของกลุ่ม</span><span class="pnum">หน้า 38 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-038.jpg"></div>
+<div class="translation">
+<p>อิทธิพลของกลุ่มต่อบุคคลไม่ควรถูกมองข้าม! บ่อยครั้งเกิดการปรับตัวตามพฤติกรรมกลุ่มแม้ไม่มีการข่มขู่หรือความเสียเปรียบใดๆ</p>
+<p>แม้แรงกดดันและอิทธิพลจะไม่ถูกใช้อย่างมีเจตนาและรู้ตัว พฤติกรรมของเสียงส่วนใหญ่ก็สามารถส่งผลต่อพฤติกรรมและการตัดสินใจของบุคคลได้ หากเสียงส่วนใหญ่ประกอบด้วย 3 คน จะมีคนปรับตัวตามมากกว่าเมื่อเสียงส่วนใหญ่มีเพียง 2 คน</p>
+<p>แรงกดดันให้สอดคล้อง (peer pressure) มักทำงานโดยไม่รู้ตัว กล่าวคือทั้งผู้ที่ได้รับอิทธิพลและกลุ่มที่มีอิทธิพลมักไม่รู้ตัวถึงผลของเสียงส่วนใหญ่ต่อบุคคลนั้น และไม่ทันสังเกตด้วยซ้ำ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">พฤติกรรมในกลุ่ม</span><span class="pnum">หน้า 39 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-039.jpg"></div>
+<div class="translation">
+<p><strong>ความคาดหวังและกฎที่ไม่ได้พูดออกมา</strong> ในฐานะสมาชิกกลุ่ม คุณมักรู้สึกว่า:</p>
+<ul>
+<li>กลุ่มคาดหวังบางสิ่งจากคุณ</li>
+<li>พฤติกรรมบางอย่างเป็นที่ยอมรับหรือไม่เป็นที่ยอมรับ</li>
+<li>กลุ่มกำลังกดดันพฤติกรรมของคุณเอง</li>
+</ul>
+<p>ความคาดหวังที่รับรู้ได้เหล่านี้ของกลุ่มที่มีต่อสมาชิก มักไม่ถูกพูดออกมาตรงๆ และสามารถอธิบายได้ว่าเป็นชุดกฎที่รู้ตัวบางส่วนและไม่รู้ตัวบางส่วน ทุกกลุ่มมีกฎแบบนี้ ซึ่งในระดับหนึ่งจำเป็นและเป็นที่เข้าใจกันดีเพื่อให้การทำงานและการอยู่ร่วมกันในกลุ่มดำเนินไปได้</p>
+<div class="note">→ การปรับตัวตามกฎบางอย่างของกลุ่มจึงอาจสมเหตุสมผล เช่น เพื่อแก้ปัญหาอย่างมีประสิทธิภาพ แต่อาจกลายเป็นปัญหาได้หากบุคคลปรับตัวตามความเห็นและความคาดหวังด้านพฤติกรรมของกลุ่ม ทั้งที่จริงต้องการกระทำแตกต่างออกไป (เช่น ตามกฎระเบียบ)</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">กระบวนการตัดสินใจในกลุ่ม: Groupthink!</span><span class="pnum">หน้า 40 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-040.jpg"></div>
+<div class="translation">
+<p>อันตรายสำคัญของการตัดสินใจแบบทีมคือ <strong>Groupthink!</strong> ซึ่งทำให้ทีมบางครั้งยึดจุดยืนสุดโต่งหรือตัดสินใจเสี่ยงเกินไป</p>
+<ul>
+<li>การปิดช่องว่างข้อมูล</li>
+<li>ความเชื่อลวงว่าไม่มีทางผิดพลาด (Illusion of incontestability)</li>
+<li>ศีลธรรมของกลุ่ม — ความเชื่อแบบไม่มีเงื่อนไขในศีลธรรมของกลุ่ม</li>
+<li>การเหมารวม (Stereotyping) — มองฝ่ายตรงข้ามหรือคนนอกกลุ่มในแง่ลบเสมอ</li>
+<li>แรงกดดันให้สอดคล้อง (Pressure to conform)</li>
+<li>การเซ็นเซอร์ตัวเอง (Self-censorship)</li>
+<li>“ผู้พิทักษ์ความคิดเห็น” ที่ตั้งตนเอง</li>
+<li>ความเชื่อลวงว่าทุกคนเห็นพ้องต้องกัน (Illusion of unanimity)</li>
+</ul>
+<div class="note">→ Groupthink เกิดขึ้นเมื่อการมุ่งหาฉันทามติในกลุ่มมีอิทธิพลเหนือกว่า หรือแม้แต่สำคัญกว่าการทำงานให้สำเร็จอย่างมีประสิทธิภาพ ซึ่งอาจนำไปสู่การรับรู้ความเป็นจริงที่บิดเบือนอย่างรุนแรง และอาจนำไปสู่การตัดสินใจที่หายนะได้</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การทำงานเป็นทีม (Teamwork) 1</span><span class="pnum">หน้า 41 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-041.jpg"></div>
+<div class="translation">
+<p>ทีมเกิดขึ้นเมื่อพฤติกรรมที่ซับซ้อนต้องการความร่วมมือข้ามสาขาวิชา ทีมถูกก่อตั้งขึ้นเพื่อวัตถุประสงค์และเป้าหมายที่แตกต่างกัน โดยมีระยะเวลาแตกต่างกันไป</p>
+<p>ในความหมายนี้ ทีมคือกลุ่มพนักงานที่รับผิดชอบกระบวนการทำงานทั้งหมดที่ครบวงจร และส่งมอบผลงานเป็นผลิตภัณฑ์หรือบริการให้แก่ผู้รับภายในหรือภายนอกองค์กร</p>
+<p>ความสามารถทางวิชาชีพไม่ควรเป็นเกณฑ์เดียวในการสร้างทีม ควรวิเคราะห์ด้วยว่าเคมีระหว่างหัวหน้างานและพนักงานเข้ากันได้ดีเพียงใด วิธีนี้ช่วยลดความไม่เข้ากันในระดับบุคคลได้ หากทีมทำงานได้ดี ก็อาจปรับเปลี่ยนได้ และการทำงานเป็นทีมที่ประสบความสำเร็จต่อไปก็เป็นไปได้</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การทำงานเป็นทีม (Teamwork) 2</span><span class="pnum">หน้า 42 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-042.jpg"></div>
+<div class="translation">
+<p>งานส่วนใหญ่ในงานซ่อมบำรุงอากาศยานทำได้ก็ต่อเมื่อเป็นส่วนหนึ่งของทีมเท่านั้น เพราะบุคคลเพียงคนเดียวไม่สามารถรับมือกับปริมาณกิจกรรมภายในเวลาที่มีได้</p>
+<p>การทำงานในทีมที่มีประสิทธิภาพเป็นเรื่องสนุก เพราะมักเห็นความสำเร็จเบื้องต้นได้ค่อนข้างเร็ว และทุกคนสามารถเรียนรู้สิ่งใหม่จากเพื่อนร่วมทีมได้ การทำงานเป็นทีมยังนำมาซึ่งความใกล้ชิดและความมั่นคงระหว่างสมาชิกทีมแต่ละคน</p>
+<h4>ข้อกำหนดสำคัญเพื่อให้ทีมทำงานได้ดี:</h4>
+<ul>
+<li>ทีมมีสมาชิกอย่างน้อย 2 คน</li>
+<li>เป้าหมายของทีมถูกสื่อสารและยอมรับ</li>
+<li>สมาชิกทีมมีส่วนร่วมบรรลุเป้าหมายด้วยทักษะของแต่ละคน</li>
+<li>ทีมมีอัตลักษณ์ที่แตกต่างจากอัตลักษณ์ของสมาชิกแต่ละคน</li>
+<li>ทีมพัฒนาช่องทางการสื่อสารที่มีประสิทธิภาพ (ทั้งภายในทีมและภายนอก)</li>
+<li>โครงสร้างของทีมถูกอธิบายในแง่ของงานและเป้าหมาย</li>
+<li>ทีมทบทวนประสิทธิภาพของตนเองเป็นระยะ</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การทำงานเป็นทีมที่สมบูรณ์แบบ?</span><span class="pnum">หน้า 43 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-043.jpg"></div>
+<div class="translation">
+<ul>
+<li>เป้าหมายร่วมกัน (Common goal)</li>
+<li>การจัดการที่ดี (Good organization)</li>
+<li>การช่วยเหลือซึ่งกันและกัน (Supporting each other)</li>
+<li>ความรับผิดชอบร่วมกัน (Shared responsibility)</li>
+<li>การกระจายบทบาทที่ชัดเจน (Clear allocation of roles)</li>
+<li>ภาวะผู้นำที่ยอมรับได้ (Accepted leadership)</li>
+<li>บรรยากาศการทำงานที่น่ารื่นรมย์และให้เกียรติกัน</li>
+<li>การสื่อสารที่โปร่งใสและซื่อสัตย์</li>
+<li>การจัดการความขัดแย้งเชิงสร้างสรรค์</li>
+<li>การคิดนอกกรอบ (Thinking outside the box)</li>
+<li>ผลป้อนกลับ ผลป้อนกลับ ผลป้อนกลับ! (Feedback, feedback, feedback)</li>
+<li>ฉลองความสำเร็จ! (Celebrate successes!)</li>
+</ul>
+<p class="en">ที่มา: การศึกษาของมหาวิทยาลัยสแตนฟอร์ด (Source: Stanford University)</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ประเด็นวัฒนธรรม (Cultural Issues)</span><span class="pnum">หน้า 44 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-044.jpg"></div>
+<div class="translation">
+<p>จากการจราจรทางอากาศระดับโลก ระดับการเชื่อมโยงที่สูง และการแลกเปลี่ยนกับผู้อื่นที่หลีกเลี่ยงไม่ได้ ความแตกต่างและปัญหาทางวัฒนธรรมจึงเกิดขึ้นซ้ำแล้วซ้ำเล่า ตัวอย่างความแตกต่าง:</p>
+<ul>
+<li>มุมมองต่อโลก (World view)</li>
+<li>แหล่งที่มา (Origin)</li>
+<li>อิทธิพลด้านภูมิอากาศ</li>
+<li>ทัศนคติต่อชีวิต</li>
+<li>ภาษา</li>
+<li>ระดับชั้นบังคับบัญชา</li>
+<li>พฤติกรรมกลุ่ม</li>
+<li>แนวทางการเมือง</li>
+<li>การศึกษาและการเลี้ยงดู</li>
+<li>ความเชื่อ</li>
+<li><strong>ระยะห่างเชิงอำนาจสูง/ต่ำ (High/low power distances)</strong></li>
+</ul>
+<p>ผลกระทบนี้ยิ่งเห็นชัดขึ้นเมื่อมีความสัมพันธ์แบบลูกค้า/ผู้จัดหาเข้ามาเกี่ยวข้องด้วย ดังนั้นเราควรรับมือกับปฏิสัมพันธ์เหล่านี้อย่างไร?</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความสามารถทางวัฒนธรรม (Cultural Competencies)</span><span class="pnum">หน้า 45 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-045.jpg"></div>
+<div class="translation">
+<p><strong>ความสามารถทางวัฒนธรรม</strong> คือความสามารถในการปฏิสัมพันธ์กับบุคคลและกลุ่มจากวัฒนธรรมอื่น (ข้ามวัฒนธรรม) หรือผู้ที่มีแนวคิดต่างกันได้อย่างเหมาะสมและประสบความสำเร็จ ในความหมายที่แคบกว่า คือความสามารถในการรับมือกับผู้ที่มีพื้นฐานวัฒนธรรมต่างกันในแบบที่ทั้งสองฝ่ายพึงพอใจ</p>
+<p>พื้นฐานของการสื่อสารข้ามวัฒนธรรมที่ประสบความสำเร็จ คือความสามารถทางอารมณ์และความอ่อนไหว ซึ่งหมายถึงการทำความเข้าใจแนวคิดเฉพาะของแต่ละคนในการรับรู้ การคิด ความรู้สึก และการกระทำ เมื่อทำงานร่วมกับพวกเขา</p>
+<p>ปัญหาที่พบบ่อยคือความสัมพันธ์แบบลูกค้า/ผู้จัดหา เช่น นักบินหรือลูกค้าพยายามวางตัวเหนือช่างเทคนิคทางสังคมและแสดงท่าทีข่มขู่</p>
+<p>ทางออกเชิงบวกในที่นี้คือจุดขายเฉพาะตัวของเราในฐานะบุคลากรที่ได้รับอนุญาต (ผู้ถือใบอนุญาต) มีเพียงวิธีเดียวเท่านั้นในการปฏิบัติงานที่ได้รับมอบหมาย และนั่นคือวิธีที่ถูกต้องตามเอกสารซ่อมบำรุงที่ใช้บังคับภายในระยะเวลาที่เหมาะสม!</p>
+<div class="note">→ ใครต้องบันทึกเอกสารงาน? — คือเราในฐานะ Certifying Staff ไม่ใช่ลูกเรือหรือหัวหน้างาน! หากปฏิบัติงานอย่างมืออาชีพและสื่อสารด้วยความอ่อนไหว มีสัดส่วนที่เหมาะสม และใช้เหตุผลเชิงวัตถุเมื่อเกิดปัญหาทางวัฒนธรรม คุณควรพร้อมรับมือกับสถานการณ์ส่วนใหญ่ได้!</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การบริหารจัดการ การกำกับดูแล และภาวะผู้นำ 1</span><span class="pnum">หน้า 46 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-046.jpg"></div>
+<div class="translation">
+<p>บทบาทของภาวะผู้นำจากฝ่ายบริหารมีความสำคัญอย่างยิ่งต่อการทำงานเป็นทีม ตัวอย่างปัญหาที่พบบ่อย:</p>
+<ul>
+<li>ข้อมูลไม่เพียงพอในการปฏิบัติตามคำสั่ง</li>
+<li>หัวหน้างานต้องไม่สมมติว่าพนักงานรู้มากหรือน้อยเกินไปเมื่อมอบหมายงาน</li>
+<li>ควรเลือกข้อมูลในลักษณะที่รับประกันว่าพนักงานสามารถทำงานได้อย่างอิสระ</li>
+<li>ควรอธิบายวัตถุประสงค์ของงานที่มอบหมาย เพื่อไม่ให้ประสิทธิภาพงานลดลงจากความสงสัยที่อาจเกิดขึ้น</li>
+<li>มอบหมายงานมากเกินไปในคราวเดียว</li>
+<li>งานละเอียดเกินไป ซับซ้อนเกินไป หรือยาวเกินไป (ขึ้นกับสถานการณ์และตัวพนักงาน)</li>
+<li>มีคำสั่งหลายอย่างที่อาจซ้อนทับกันถูกมอบหมายพร้อมกัน</li>
+<li>ข้อมูลน้อยเกินไป — หัวหน้างานสมมติมากเกินไปว่าพนักงานเข้าใจเรื่องที่กำลังพูดถึง ทั้งที่จริงไม่เข้าใจ</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การกำกับดูแลและภาวะผู้นำ (Aufsicht &amp; Führung) 2</span><span class="pnum">หน้า 47 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-047.jpg"></div>
+<div class="translation">
+<p>ในฐานะ <strong>“Certifying Staff”</strong> คุณยังรับบทบาทเป็นผู้กำกับดูแล (supervisor) ด้วย บทบาทนี้ไม่ใช่บทบาทเชิงวินัย แต่ขึ้นอยู่กับสถานการณ์เฉพาะหน้า</p>
+<p>อาจรวมถึงการฝึกอบรมภาคปฏิบัติ การสนับสนุนพนักงาน หรือการกำกับดูแล (การอนุมัติงานของผู้อื่น) ดังนั้นคุณจึงต้องมีความสามารถในการประเมินสถานการณ์อย่างต่อเนื่อง รวมถึงรับมือกับปฏิกิริยาของผู้ที่อยู่ภายใต้การกำกับดูแล และริเริ่มมาตรการแก้ไขเมื่อจำเป็น</p>
+<div class="note">→ การสื่อสารและวัฒนธรรมการให้ผลป้อนกลับ (feedback) เป็นสิ่งสำคัญยิ่งในเรื่องนี้</div>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-4" class="module-section">
+<h2 class="section-title">Module 9.4 Factors Affecting Performance</h2>
+
+<div class="toc">หัวข้อ: ความฟิต/สุขภาพ, ความเครียด, ภาระงาน, การบริหารภาระงาน, แรงกดดันด้านเวลา, การนอนและความล้า, การทำงานเป็นกะ, แอลกอฮอล์ ยา และสารเสพติด</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 48 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-048.jpg"></div>
+<div class="translation"><h4>บทที่ 9.4 — ปัจจัยที่ส่งผลต่อสมรรถนะ</h4></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม</span><span class="pnum">หน้า 49 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-049.jpg"></div>
+<div class="translation">
+<ul>
+<li>ความฟิต/สุขภาพ (Fitness/health)</li>
+<li>ความเครียด: ทั้งจากครอบครัวและงาน (Stress: domestic and work related)</li>
+<li>แรงกดดันด้านเวลาและกำหนดส่ง (Time pressure and deadlines)</li>
+<li>ภาระงาน: มากเกินไปและน้อยเกินไป และการบริหารภาระงาน, การขาดกำลังคน</li>
+<li>การนอนหลับและความล้า, การทำงานเป็นกะ</li>
+<li>แอลกอฮอล์ ยา และการใช้สารเสพติด</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">บทนำ (Introduction)</span><span class="pnum">หน้า 50 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-050.jpg"></div>
+<div class="translation">
+<p>ปัจจัยที่ส่งผลต่อสมรรถนะสามารถกระทบพนักงานซ่อมบำรุงอากาศยาน อาจจำกัดความสามารถในการปฏิบัติงานอย่างถูกต้อง จึงทำให้ไม่สามารถบรรลุแนวปฏิบัติงานที่จำเป็นและปลอดภัยได้</p>
+<table class="tf">
+<tr><th>ปัจจัย</th><th>คำอธิบาย</th></tr>
+<tr><td>ความฟิตและสุขภาพ</td><td>การรักษาสมดุลชีวิตและความเป็นอยู่ที่ดีทั้งร่างกาย จิตใจ และสังคมให้ดีที่สุด รวมถึงสมดุลชีวิต-การทำงานเพื่อทำงานที่ได้รับมอบหมายให้สำเร็จในระยะยาว</td></tr>
+<tr><td>ความเครียด แรงกดดันด้านเวลา ภาระงานมากเกินไป</td><td>ปฏิกิริยาทางจิตใจและร่างกายที่เกิดจากสิ่งกระตุ้นเฉพาะ (stressors) และความตึงเครียดทางกายและใจที่ตามมา</td></tr>
+<tr><td>ความล้า การนอนหลับที่เพียงพอ และการทำงานเป็นกะ</td><td>สภาวะทางกายและจิตใจที่มีความสนใจลดลง รวมถึงขาดพลังงานและแรงจูงใจ การทำงานเป็นกะเป็นสิ่งจำเป็นอย่างยิ่งในบริบทงานซ่อมบำรุงอากาศยาน</td></tr>
+<tr><td>ผลของยา แอลกอฮอล์ และยาเสพติด</td><td>ข้อจำกัดทางร่างกายจากการบริโภคหรือใช้ในทางที่ผิดซึ่งยา แอลกอฮอล์ หรือยาเสพติด หรือผลจากการเสพติด</td></tr>
+</table>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">สุขภาพ (Health)</span><span class="pnum">หน้า 51 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-051.jpg"></div>
+<div class="translation">
+<p>งานซ่อมบำรุงอากาศยานหรือชิ้นส่วนต้องใช้แรงกายมาก มักต้องทำงานในสภาพแวดล้อมทางกายภาพที่หลากหลายและอาจต้องทำงานทุกช่วงเวลาของวัน (24/7)</p>
+<p>หลายปัจจัยส่งผลต่อสุขภาพของพนักงานและความพร้อมในการปฏิบัติหน้าที่ ผลกระทบต่อแต่ละบุคคลขึ้นกับหลายปัจจัย เช่น ชนิดงานที่ทำ สภาพแวดล้อมที่เผชิญ ความมั่นคงส่วนบุคคล หรือสถานการณ์ชีวิตปัจจุบันของผู้นั้น ความรับผิดชอบในการดูแลรักษาวิถีชีวิตที่ดีต่อสุขภาพเป็นของทุกคน</p>
+<ul>
+<li>รับประทานอาหารสม่ำเสมอและสมดุล</li>
+<li>หลีกเลี่ยงน้ำหนักเกิน</li>
+<li>การสูบบุหรี่ → ตระหนักถึงความเสี่ยง</li>
+<li>บริโภคสารกระตุ้นในปริมาณพอเหมาะ ตระหนักถึงผลที่ตามมา</li>
+<li>ตระหนักถึงผลของยา</li>
+<li>การทำงานภายใต้อิทธิพลของยาเสพติดหรือแอลกอฮอล์เป็นข้อห้ามในงานซ่อมบำรุงอากาศยาน!</li>
+<li>นอนหลับพักผ่อนให้เพียงพอ</li>
+<li>ตระหนักถึงผลของความเครียด การป้องกัน และการกำหนดมาตรการรับมือที่เหมาะสม</li>
+<li>ตระหนักถึงสมดุลชีวิต-การทำงาน</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความเครียด — นิยาม</span><span class="pnum">หน้า 52 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-052.jpg"></div>
+<div class="translation">
+<p>การรับมือกับความต้องการต่างๆ เป็นส่วนหนึ่งของชีวิตที่หลีกเลี่ยงไม่ได้สำหรับทุกคน ในระดับหนึ่งความต้องการเหล่านี้ช่วยกระตุ้นและเป็นประโยชน์ แต่เมื่อเกินความสามารถส่วนบุคคลในการรับมือ ผลลัพธ์คือความเครียดเชิงลบและอาจกลายเป็นปัญหาได้!</p>
+<p>สิ่งกระตุ้นเฉพาะ (stressors) ก่อให้เกิดความเครียด:</p>
+<ul>
+<li><strong>Reactive</strong> — เหตุการณ์ประจำวัน (แรงกดดันด้านเวลา สถานการณ์ไม่คาดคิดหรือผิดปกติ ความต้องการส่วนบุคคล)</li>
+<li><strong>Physical</strong> — ความร้อน ความเย็น เสียงดัง แรงสั่นสะเทือน สารอันตราย (เช่น คาร์บอนมอนอกไซด์)</li>
+<li><strong>Psychological</strong> — ความปั่นป่วนทางอารมณ์ (เช่น ความเบื่อ ความรัก ความเศร้าโศก ความกังวล ปัญหาต่างๆ)</li>
+</ul>
+<div class="note">→ ความเครียดระยะยาวสามารถทำลายสุขภาพ และในกรณีเลวร้ายที่สุดอาจนำไปสู่ภาวะหมดไฟ (burnout) หรือภาวะซึมเศร้า</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความเครียด "ดี" และ "ไม่ดี"</span><span class="pnum">หน้า 53 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-053.jpg"></div>
+<div class="translation">
+<p>ความเครียดจึงเป็นปฏิกิริยาทั้งเชิงบวกและเชิงลบของมนุษย์ต่อความตึงเครียดทางร่างกายและจิตใจ</p>
+<h4>ความเครียดเชิงบวก (Positive Stress)</h4>
+<p>กระตุ้น น่าตื่นเต้น และให้ความพึงพอใจ ส่งผลให้: ประสิทธิภาพเพิ่มขึ้น, แรงจูงใจเพิ่มขึ้น, ความสนใจและสมาธิเพิ่มขึ้น</p>
+<h4>ความเครียดเชิงลบ (Negative Stress)</h4>
+<p>ลดทอนประสิทธิภาพ และแสดงออกผ่าน:</p>
+<ul>
+<li>อาการทางสรีระและผลกระทบต่อสุขภาพที่ตามมา — คลื่นไส้ ปวดหัว ปัญหาการนอน ท้องเสีย แผลในกระเพาะ</li>
+<li>อาการทางพฤติกรรม — กระสับกระส่าย มือสั่น ตอบสนองเกินเหตุ ดื่มมากเกินไป</li>
+<li>ผลทางความคิด — สมาธิไม่ดี ตัดสินใจไม่ได้ ขี้ลืม</li>
+<li>ผลเชิงอัตวิสัย — วิตกกังวล หงุดหงิดง่าย ซึมเศร้า อารมณ์แปรปรวน ก้าวร้าว</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาระงาน (Workload)</span><span class="pnum">หน้า 54 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-054.jpg"></div>
+<div class="translation">
+<p>ระดับการกระตุ้น สิ่งเร้า และความต้องการในระดับหนึ่งเป็นประโยชน์ต่อบุคคล เป็นแรงผลักดันโดยพื้นฐาน แต่หากมากเกินไปจะนำไปสู่ผลเสีย การมีสิ่งกระตุ้นน้อยเกินไปก็เป็นปัญหาได้เช่นกัน</p>
+<p>แต่ละคนต้องการระดับความต้องการที่ (เหมาะสมที่สุด) แตกต่างกันเพื่อทำงานให้สำเร็จอย่างมีแรงจูงใจ บางคนรู้สึกล้นมือเมื่อต้องทำมากกว่าหนึ่งงานพร้อมกัน ในขณะที่บางคนดูเหมือนไร้ความเครียดและมีความสุขเมื่อถูกขอให้รับมือกับงานหรือความท้าทายที่เพิ่มมากขึ้นเรื่อยๆ</p>
+<table class="tf">
+<tr><th>ประเภท</th><th>ลักษณะ</th></tr>
+<tr><td><strong>Hypostress</strong></td><td>ภาวะถูกท้าทายน้อยเกินไป มองได้ว่าเป็นความเบื่อหน่ายถาวรหรือถูกกระตุ้นน้อยเกินไป</td></tr>
+<tr><td><strong>Eustress</strong> (จากภาษากรีก EU แปลว่าดี)</td><td>ความเครียดที่กระตุ้นและดี ช่วยจูงใจ ให้กำลังใจ และทำให้ทำงานที่มีอยู่สำเร็จ</td></tr>
+<tr><td><strong>Distress</strong> (จากภาษาละติน dis แปลว่าไม่ดี)</td><td>ความเครียดเชิงลบที่เกินความสามารถในการรับมือของบุคคล</td></tr>
+</table>
+<p>ขึ้นอยู่กับสภาพที่เผชิญ ความเครียดเชื่อมโยงกับผลลัพธ์ที่พึงประสงค์หรือไม่พึงประสงค์ เราผ่านระยะต่างๆ ขึ้นอยู่กับระยะเวลาของความเครียดหรือความต้องการเฉพาะหน้า</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ปฏิกิริยาต่อความเครียด (Stress Reaction)</span><span class="pnum">หน้า 55 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-055.jpg"></div>
+<div class="translation">
+<p>ทันทีที่เรารับรู้ความเครียด เราตอบสนองด้วยกลยุทธ์ต่างๆ:</p>
+<h4>กลยุทธ์การรับมือ (Coping strategies)</h4>
+<p>การจัดการกับอาการของความเครียด เช่น มอบหมายภาระงาน จัดลำดับความสำคัญของงาน แก้ไขปัญหา หาทางออก ฯลฯ</p>
+<h4>กลยุทธ์การป้องกันตัว (Defense strategies) — เป็นการบรรเทาอาการแบบผิวเผิน</h4>
+<ul>
+<li>การใช้ยา แอลกอฮอล์ หรือยาเสพติด</li>
+<li>การปฏิเสธปัญหา</li>
+<li>การโทษผู้อื่น</li>
+<li>การลดความสำคัญของปัญหา</li>
+</ul>
+<p>นอกจากนี้ บุคลิกภาพที่แตกต่างกัน กล่าวคือแต่ละประเภท ก็มีพฤติกรรมตอบสนองที่ต่างกันไปด้วย</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การจัดการความเครียด (Stress Management)</span><span class="pnum">หน้า 56 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-056.jpg"></div>
+<div class="translation">
+<p>บางครั้งไม่สามารถแก้ปัญหาได้เพราะอยู่นอกเหนือการควบคุมของบุคคล เช่น ในสถานการณ์ฉุกเฉิน... แต่มีเทคนิคที่พิสูจน์แล้วช่วยรับมือกับความเครียดเชิงลบได้:</p>
+<ul>
+<li>รู้สาเหตุของปัญหาความเครียดก่อนจึงจะปรับปรุงสถานการณ์ได้จริง</li>
+<li>รับรู้ปัจจัยความเครียดอย่างมีสติ</li>
+<li>รักษามุมมองภาพรวม — ระบุและหลีกเลี่ยงตัวกระตุ้นความเครียดในสิ่งแวดล้อม = การควบคุม</li>
+<li>สมดุลชีวิต-การทำงาน</li>
+<li>ออกกำลังกายหรือมีกิจกรรมทางกายสม่ำเสมอ</li>
+<li>ใช้เทคนิคผ่อนคลาย</li>
+<li>พักผ่อน — ให้รางวัลตัวเอง</li>
+<li>ควบคุมการนอนและโภชนาการอย่างระมัดระวัง</li>
+<li>ปรับทัศนคติ... พัฒนามุมมองแบบมองโลกในแง่ดี</li>
+<li>หลีกเลี่ยงการใช้ยาเพื่อบรรเทาความเครียด</li>
+<li>พูดคุยเรื่องความเครียดอย่างเปิดเผย รู้จักปฏิเสธ ("no")</li>
+<li>หาโอกาสพูดคุยกับเพื่อน เพื่อนร่วมงาน หรือขอคำปรึกษาจากผู้เชี่ยวชาญ</li>
+</ul>
+<div class="note">→ ไม่มีสูตรวิเศษต้านความเครียดและผลของมัน มีเพียงสามัญสำนึกเท่านั้น...</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การบริหารจัดการภาระงานในองค์กร</span><span class="pnum">หน้า 57 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-057.jpg"></div>
+<div class="translation">
+<p>ในสภาพแวดล้อมเชิงพาณิชย์ ยากที่จะปลอดจากแรงกดดันด้านเวลาและความเครียดโดยสิ้นเชิง องค์กรต้องปฏิบัติตามข้อกำหนดทางกฎหมายการบินที่บังคับใช้!</p>
+<p>การบริหารภาระงานเชิงปฏิบัติการในงานซ่อมบำรุงอากาศยานควรครอบคลุม:</p>
+<ul>
+<li>มั่นใจว่าพนักงานมีทักษะที่จำเป็นสำหรับงาน → ภายในขอบเขตความสามารถและประสบการณ์ของตน</li>
+<li>มั่นใจว่าพนักงานมีทรัพยากรที่จำเป็น (เวลา เอกสาร อุปกรณ์ภาคพื้น เครื่องมือ และอะไหล่)</li>
+<li>มอบหมายงานให้ทีมหรือช่างเทคนิคที่สามารถทำงานให้เสร็จภายในเวลาที่มี... โดยไม่ต้องใช้ “ทางลัดหรือ walkaround”</li>
+<li>จัดฝึกอบรมด้าน Human Factors ครอบคลุมทุกระดับของพนักงาน เพื่อสร้างความเข้าใจในหัวข้อนี้ (ฝ่ายบริหารและฝ่ายวางแผน)</li>
+<li>ความตระหนักรู้สถานการณ์ (Situational awareness) ในหมู่พนักงานทุกคน — ตระหนักเมื่อภาวะภาระงานล้นเกินกำลังก่อตัวขึ้น และตอบสนองอย่างทันท่วงที</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แรงกดดันด้านเวลา (Time Pressure) 1</span><span class="pnum">หน้า 58 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-058.jpg"></div>
+<div class="translation">
+<p>คุณจะรับมือกับสิ่งนี้อย่างไร? — พื้นที่ตึงเครียดระหว่าง <strong>คุณภาพและความสมควรเดินอากาศ (Quality &amp; Airworthiness)</strong>, <strong>เวลา (Time)</strong>, และ<strong>ต้นทุน (Costs)</strong></p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แรงกดดันด้านเวลา (Time Pressure) 2</span><span class="pnum">หน้า 59 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-059.jpg"></div>
+<div class="translation">
+<p>อุตสาหกรรมการบินและงานซ่อมบำรุงอากาศยาน/ชิ้นส่วน เช่นเดียวกับอุตสาหกรรมเชิงพาณิชย์อื่นๆ ถูกขับเคลื่อนด้วยกำหนดส่ง milestone และตารางเวลา แรงกดดันนี้จึงส่งผลกระทบต่อพนักงานทุกระดับในทุกส่วนงาน</p>
+<p>ฝ่ายบริหารมีแรงกดดันตามสัญญาที่ต้องส่งมอบอากาศยานให้เสร็จตามกรอบเวลาที่ลูกค้ากำหนด แรงผลักดันให้เพิ่มอัตราการใช้งานอากาศยานหมายถึงต้องทำงานซ่อมบำรุงให้มากขึ้นในเวลาที่น้อยลง ซึ่งมักบรรลุได้ผ่านการทำงาน 3 กะ เพิ่มประสิทธิภาพ และแรงกดดันด้านเวลา</p>
+<p>ท้ายที่สุดแล้ว ความตรงต่อเวลาและความพึงพอใจของลูกค้า/ผู้โดยสารเป็นสิ่งสำคัญลำดับต้น เห็นได้ชัดว่าแรงกดดันทางเศรษฐกิจของฝ่ายบริหารส่งผลไปถึงทุกจุดทำงานในบริษัท</p>
+<p>ดังนั้นช่างเทคนิคซ่อมบำรุงอากาศยานจึงมีแรงขับเคลื่อนสองด้าน: การทำตามกำหนดเวลา/วันที่ที่ได้รับแจ้ง และความรับผิดชอบในการทำงานอย่างปลอดภัย ความขัดแย้งที่อาจเกิดขึ้นระหว่างแรงขับเคลื่อนทั้งสองนี้ก่อให้เกิดปัญหา</p>
+<p>พนักงานทุกคนอยู่ในพื้นที่ตึงเครียดระหว่างความรับผิดชอบด้านคุณภาพ ต้นทุน และเวลาอยู่ตลอดเวลา นอกจากนี้อาจมีแรงกดดันด้านเวลาที่กำหนดขึ้นเอง เพื่อทำงาน/ภารกิจให้เสร็จก่อนพักหรือก่อนหมดกะ หรือแม้แต่เพื่อความก้าวหน้าในอาชีพ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แรงกดดันด้านเวลา (Time Pressure) 3</span><span class="pnum">หน้า 60 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-060.jpg"></div>
+<div class="translation">
+<p>แน่นอนว่าแรงกดดันด้านเวลาที่มากเกินไป (ไม่ว่าจะเป็นจริงหรือกำหนดขึ้นเอง) ลดความรอบคอบและความใส่ใจในการทำงาน และอาจเพิ่มความเสี่ยงของข้อผิดพลาด ซึ่งท้ายที่สุดอาจนำไปสู่อุบัติการณ์และอุบัติเหตุได้</p>
+<div class="note">→ หน่วยงานกำกับดูแลตระหนักถึงเรื่องนี้และได้ออกกฎหมายควบคุมแล้ว</div>
+<p>จำเป็นต้องลดแรงกดดันเชิงพาณิชย์ต่อผู้ที่เกี่ยวข้องในงานซ่อมบำรุงอากาศยาน และมั่นใจว่าประเด็นความสมควรเดินอากาศมีความสำคัญเหนือประเด็นเชิงพาณิชย์เสมอ! สิ่งนี้ต้องอาศัยวัฒนธรรมและการนำมาตรฐานไปปฏิบัติภายในองค์กร</p>
+<p>ผู้รับผิดชอบต้องพิจารณา: ความพร้อมของอากาศยาน, ความพร้อมของอะไหล่, ความพร้อมของโรงเก็บอากาศยาน, ความพร้อมของเครื่องมือและอุปกรณ์ภาคพื้น, เวลาที่มีจริงในการทำงานให้เสร็จ, คู่มือที่จำเป็นทั้งหมดพร้อมใช้งานหรือไม่, เวลาสำหรับส่งมอบงานระหว่างกะ และที่สำคัญที่สุด... กำลังคนจริงที่มีคุณสมบัติและประสบการณ์ที่เหมาะสม</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">EASA กำหนดไว้อย่างไร?</span><span class="pnum">หน้า 61 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-061.jpg"></div>
+<div class="translation">
+<h4>145.A.30 ข้อกำหนดด้านบุคลากร</h4>
+<p><strong>145.A.30(d):</strong> องค์กรต้องมีระบบวางแผนความพร้อมของบุคลากร เพื่อให้มั่นใจว่าองค์กรมีบุคลากรที่มีคุณสมบัติเหมาะสมเพียงพอสำหรับวางแผน ปฏิบัติงาน ควบคุมดูแล ตรวจสอบ และติดตามกิจกรรมขององค์กรตามเงื่อนไขการอนุมัติ</p>
+<p><strong>AMC 145.A.30(d):</strong> การมีบุคลากรเพียงพอ หมายถึงองค์กรจ้างหรือทำสัญญากับบุคลากรที่มีความสามารถ ตามรายละเอียดในแผนชั่วโมงคนทำงาน โดยอย่างน้อยครึ่งหนึ่งของบุคลากรที่ปฏิบัติงานซ่อมบำรุงในแต่ละเวิร์คช็อป โรงเก็บอากาศยาน หรือลานจอด ในกะใดๆ ควรเป็นพนักงานประจำ เพื่อรักษาเสถียรภาพขององค์กร</p>
+<p>การขาดงานตามแผน (สำหรับฝึกอบรม วันหยุด ฯลฯ) ควรถูกนำมาพิจารณาเมื่อจัดทำแผนชั่วโมงคนทำงาน แผนชั่วโมงคนทำงานซ่อมบำรุงควรได้รับการทบทวนอย่างน้อยทุก 3 เดือนและปรับปรุงเมื่อจำเป็น ความเบี่ยงเบนอย่างมีนัยสำคัญจากแผนควรถูกรายงานผ่านผู้จัดการฝ่ายไปยังผู้จัดการติดตามการปฏิบัติตามข้อกำหนด (compliance monitoring manager) และผู้บริหารที่รับผิดชอบเพื่อทบทวน</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การฟื้นฟูร่างกาย — การนอนหลับ</span><span class="pnum">หน้า 62 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-062.jpg"></div>
+<div class="translation">
+<div class="note">→ มนุษย์ต้องนอนหลับ!</div>
+<p>การนอนหลับไม่ใช่แค่การฟื้นฟูร่างกายเท่านั้น ขณะที่บางส่วนของร่างกาย “ทำงานด้วยพลังงานต่ำ” ระหว่างนอน ส่วนอื่นกลับทำงานอย่างหนักมาก บางครั้งสมองของเราทำงานที่ประสิทธิภาพสูงสุด ประมวลผลประสบการณ์ในแต่ละวัน ร่างกายตอบสนองต่อสิ่งเร้าภายนอกอ่อนลง ในขณะเดียวกันกระบวนการสร้างและสลายที่สำคัญเกิดขึ้นในร่างกายระหว่างการนอนหลับ</p>
+<p>ระหว่างการนอน เราผ่านระยะการนอนที่มีความลึกต่างกันซึ่งสลับกันซ้ำๆ ตลอดคืน กระบวนการเมแทบอลิซึม อัตราการเต้นของหัวใจ ความดันโลหิต การหายใจ ความตึงตัวของกล้ามเนื้อ และอุณหภูมิร่างกายแปรผันในแต่ละระยะการนอน มี 2 ระยะสำคัญสำหรับการฟื้นฟูระหว่างการนอน: <strong>การนอนหลับลึก (Deep sleep)</strong> — ร่างกายและจิตใจฟื้นฟูตัวเอง ซึ่งจำเป็นต่อการรักษาและซ่อมแซมร่างกายของเรา</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความผิดปกติของการฟื้นฟู — ความล้า (Fatigue)</span><span class="pnum">หน้า 63 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-063.jpg"></div>
+<div class="translation">
+<p><strong>ความล้า (Fatigue)</strong> บ่งบอกถึงความต้องการของร่างกายที่จะฟื้นตัวและซ่อมแซมตัวเอง ความล้าสามารถบรรเทาได้ด้วยการพักผ่อนเท่านั้น หรือท้ายที่สุดคือช่วงเวลาการนอนหลับ</p>
+<h4>ปัจจัยที่มีผลต่อระดับความล้า:</h4>
+<ul>
+<li>ระดับความเหนื่อยล้าทางกายหรือจิตใจ</li>
+<li>ระยะเวลาที่ตื่นอยู่</li>
+<li>ระดับสถานะการฟื้นตัว</li>
+<li>ความไม่สอดคล้องของจังหวะการนอน (Desynchronization)</li>
+<li>สถานะสุขภาพ</li>
+<li>การใช้แอลกอฮอล์และยาเสพติด</li>
+</ul>
+<p>หากรู้สึกเหนื่อยบ่อยและมีปัญหาประสิทธิภาพลดลงระหว่างวัน อาจนอนนานเกินไป น้อยเกินไป หรือมีการนอนที่ถูกรบกวน ซึ่งเป็นอันตรายในระยะยาวและอาจนำไปสู่ปัญหาสุขภาพกายและจิตใจ ควรระบุสาเหตุเหล่านี้ให้ชัดเจน เพราะอาจมีสาเหตุแฝงอื่นด้วย</p>
+<div class="note">→ ปริมาณการนอนที่เหมาะสมแตกต่างกันในแต่ละบุคคล งานวิจัยปัจจุบันแนะนำอย่างน้อย <strong>7–9 ชั่วโมง</strong></div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การทำงานเป็นกะ — จังหวะการนอน — สมรรถนะ</span><span class="pnum">หน้า 64 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-064.jpg"></div>
+<div class="translation">
+<p>งานซ่อมบำรุงอากาศยานเชิงพาณิชย์เป็นธุรกิจที่ดำเนินการตลอด 24 ชั่วโมงอย่างชัดเจน ซึ่งหมายถึงการทำงานหลายกะสำหรับผู้ปฏิบัติงานจำนวนมาก</p>
+<p>ชั่วโมงทำงานกลางคืนและการสลับกะรบกวนรูปแบบการนอนของเรา และส่งผลต่อระดับการพักผ่อนและฟื้นตัว นาฬิกาชีวภาพภายในกำหนดว่าร่างกายต้องการอะไรและเมื่อไหร่ เป็นตัวกระตุ้นความต้องการโปรแกรมซ่อมแซมและพักฟื้นในเวลากลางคืน</p>
+<p>เราถูกปรับให้พักผ่อนตอนกลางคืนและกระฉับกระเฉงตอนกลางวัน ผู้ที่ทำงานเป็นกะจะตระหนักถึงเรื่องนี้เป็นพิเศษ สิ่งนี้มาจาก<strong>นาฬิกาชีวภาพ (Biological Clock)</strong> ซึ่งเป็นระบบซับซ้อนของร่างกาย (ความต้องการนอน/ความต้องการแสงกลางวัน การหลั่งฮอร์โมน และกระบวนการเมแทบอลิซึม) ที่ทำงานเป็นวงจร 24/25 ชั่วโมง ผู้เชี่ยวชาญเรียกสิ่งนี้ว่า<strong>จังหวะชีวิตประจำวัน (Circadian Rhythm)</strong></p>
+<p>ตลอดวัน มีช่วงเวลาของสมรรถนะและการพักผ่อนที่แตกต่างกัน:</p>
+<ul>
+<li>สมรรถนะเพิ่มขึ้นเข้าใกล้ช่วงเช้า</li>
+<li>คนส่วนใหญ่มีประสิทธิผลสูงสุดช่วง 10.00–12.00 น. และประมาณ 17.00 น.</li>
+<li>ในทางกลับกัน หลายคนรู้สึกเชื่องช้าช่วงประมาณ 14.00 น.</li>
+<li>สมรรถนะของเราต่ำสุดในช่วง 02.00–05.00 น.</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แอลกอฮอล์ ยา และการใช้สารเสพติด</span><span class="pnum">หน้า 65 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-065.jpg"></div>
+<div class="translation">
+<p class="en">อ้างอิง: 66.B.500</p>
+<p>สมรรถนะของมนุษย์ถูกลดทอนจากการบริโภคแอลกอฮอล์หรือยาเสพติด เช่นเดียวกับการจราจรสาธารณะ การพิสูจน์การฝ่าฝืนกฎนี้ในงานซ่อมบำรุงอากาศยานนำไปสู่การจำกัดหรือเพิกถอนใบอนุญาต</p>
+<div class="note">→ IR 1321/2015 Part-66.B.500: “การปฏิบัติงานซ่อมบำรุงหรือออกใบรับรองปล่อยเครื่องกลับเข้าประจำการขณะได้รับผลกระทบจากแอลกอฮอล์หรือยาเสพติด” (ถือเป็นการฝ่าฝืน)</div>
+<p>บริษัทส่วนใหญ่ยังคงมีข้อตกลงพิเศษภายในที่ห้ามการบริโภคแอลกอฮอล์ ฯลฯ หากจำเป็นต้องใช้ยาเนื่องจากเจ็บป่วยหรือภาวะที่คล้ายกัน ผู้ที่เกี่ยวข้องต้องตระหนักถึงข้อจำกัดที่ตามมา</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แอลกอฮอล์และยา</span><span class="pnum">หน้า 66 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-066.jpg"></div>
+<div class="translation">
+<p>คนส่วนใหญ่ทราบดีถึงผลกดประสาทของแอลกอฮอล์ต่อระบบประสาทส่วนกลาง แม้แต่ปริมาณเล็กน้อยก็ทำให้ประสิทธิภาพลดลง เวลาตอบสนองเพิ่มขึ้น และวิจารณญาณถูกจำกัดอย่างรุนแรง</p>
+<p>แอลกอฮอล์มีผลคล้ายยากล่อมประสาทและยานอนหลับ และคงอยู่ในเลือดเป็นระยะเวลานานพอสมควร ทุกคนควรพิจารณาว่าตนเองดื่มได้มากแค่ไหนเพื่อให้ยังคงพร้อมทำงานได้ในวันถัดไป ผลของแอลกอฮอล์อาจแย่ลงอย่างมากหากบุคคลนั้นเหนื่อย ป่วย หรือได้ใช้ยาไปแล้ว</p>
+<div class="note">→ แอลกอฮอล์เป็นอันตรายเสมอ! หลายคนไม่ทราบว่าการบริโภคแอลกอฮอล์ก่อให้เกิดความเสียหายทางกายเสมอ เพราะแอลกอฮอล์เป็นสารพิษต่อเซลล์ (cellular toxin)</div>
+<p>นอกจากนี้ ผู้ที่ดื่มแอลกอฮอล์มากเกินไปเป็นประจำอาจเผชิญปัญหาในสภาพแวดล้อมทางสังคม รวมถึงปัญหาในครอบครัว กลุ่มเพื่อน คนรู้จัก และที่ทำงานด้วย</p>
+<p>ยาใดๆ ไม่ว่าจะใช้บ่อยแค่ไหน อาจส่งผลกระทบต่อประสิทธิภาพการทำงานได้ ทั้งทางตรงหรือผ่านผลข้างเคียง พนักงานในพื้นที่ที่มีความสำคัญด้านความปลอดภัย เช่น งานซ่อมบำรุงอากาศยาน ควรระมัดระวังและขอคำแนะนำจากผู้เชี่ยวชาญเมื่อต้องใช้ยา</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ยาเสพติด (Drugs)</span><span class="pnum">หน้า 67 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-067.jpg"></div>
+<div class="translation">
+<p>ยาเสพติดผิดกฎหมาย เช่น เอ็กซ์ตาซี โคเคน และเฮโรอีน ส่งผลต่อระบบประสาทส่วนกลางและลดทอนการทำงานของจิตใจ การขยายจิตสำนึกไม่ได้หมายถึงการเพิ่มประสิทธิภาพ!</p>
+<div class="note">→ สารเหล่านี้ล้วนมีผลกระทบอย่างมีนัยสำคัญต่อสมรรถนะของมนุษย์ ด้วยเหตุนี้จึงไม่มีที่ยืนในงานซ่อมบำรุงอากาศยาน</div>
+<p>การสูบกัญชา (Cannabis/Marijuana) เป็นที่แพร่หลาย และสามารถส่งผลต่อวิจารณญาณได้นานกว่า 24 ชั่วโมง โดยเฉพาะส่งผลต่อความสามารถในการมีสมาธิ การจดจำข้อมูล และการทำงานที่ยากให้สำเร็จ</p>
+<p>ผู้ที่ใช้สารเสพติดควรศึกษาผลกระทบล่วงหน้า และต้องเตรียมพร้อมรับผลที่ตามมา เช่น การเพิกถอนใบอนุญาตหรือผลกระทบเชิงปฏิบัติการอื่นๆ ในกรณีที่ฝ่าฝืน!</p>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-5" class="module-section">
+<h2 class="section-title">Module 9.5 Physical Environment</h2>
+
+<div class="toc">หัวข้อ: สภาพแวดล้อมการทำงาน, เสียงดัง, ควันและฝุ่นละออง, แสงสว่าง, สภาพอากาศและอุณหภูมิ, การสั่นสะเทือน, <strong>การตระหนักรู้สถานการณ์ (Situation Awareness — ย้ายมาจากบท 9.2 เดิม)</strong></div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 68 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-068.jpg"></div>
+<div class="translation"><h4>บทที่ 9.5 — สภาพแวดล้อมทางกายภาพ</h4></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม</span><span class="pnum">หน้า 69 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-069.jpg"></div>
+<div class="translation">
+<ul>
+<li>เสียงดังและควัน (Noise and fumes)</li>
+<li>แสงสว่าง (Illumination)</li>
+<li>สภาพอากาศและอุณหภูมิ (Climate and temperature)</li>
+<li>การเคลื่อนไหวและการสั่นสะเทือน (Motion and vibration)</li>
+<li>สภาพแวดล้อมการทำงาน (Working environment)</li>
+<li><strong>การตระหนักรู้สถานการณ์ (Situational awareness)</strong></li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">สภาพแวดล้อมการทำงาน</span><span class="pnum">หน้า 70 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-070.jpg"></div>
+<div class="translation">
+<p>ในงานซ่อมบำรุงอากาศยาน เราพบสภาพแวดล้อมการทำงานที่หลากหลาย:</p>
+<table class="tf">
+<tr><th>ประเภท</th><th>สถานที่</th></tr>
+<tr><td><strong>Line Maintenance</strong></td><td>โดยทั่วไปนอกโรงเก็บอากาศยาน บนลานจอด (apron) หรือประตูขึ้นเครื่อง</td></tr>
+<tr><td><strong>Base Maintenance</strong></td><td>โดยทั่วไปในโรงเก็บอากาศยาน (hangar)</td></tr>
+<tr><td><strong>Shop Maintenance</strong></td><td>โดยทั่วไปในเวิร์คช็อปหรือแท่นทดสอบ</td></tr>
+</table>
+<p>ขึ้นอยู่กับสภาพแวดล้อมและงาน การทำงานเกิดขึ้นภายใต้ทุกสภาพอากาศทุกช่วงเวลาของวัน ผลกระทบจากเสียง สภาพอากาศและอุณหภูมิ การเคลื่อนไหวและการสั่นสะเทือน รวมถึงความจำเป็นต้องทำงานในพื้นที่จำกัด ล้วนมีลักษณะและปัจจัยเฉพาะที่ส่งผลกระทบต่อสมรรถนะของมนุษย์</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">เสียงดัง (Noise) 1</span><span class="pnum">หน้า 71 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-071.jpg"></div>
+<div class="translation">
+<p>การรับรู้เสียงในฐานะเสียงรบกวนและผลกระทบต่อมนุษย์ ขึ้นอยู่กับปริมาณทางกายภาพที่วัดได้:</p>
+<ul>
+<li><strong>ระดับความดันเสียง (Sound pressure level):</strong> หน่วยวัดทางกายภาพของความเข้มของความดันเสียง วัดเป็นเดซิเบล (dB)</li>
+<li><strong>ระดับเสียง (Pitch):</strong> เสียงสูงถูกรับรู้แตกต่างจากเสียงต่ำ</li>
+<li><strong>ลักษณะเสียงกระแทก (Impulsiveness):</strong> เสียงที่มีการเปลี่ยนแปลงระดับอย่างมีนัยสำคัญ</li>
+</ul>
+<p>มลภาวะทางเสียงเกิดขึ้นเมื่อเสียงรบกวนสมาธิ นอกจากผลกระทบทางสรีระแล้ว ผลกระทบทางจิตใจของเสียงก็มีนัยสำคัญเช่นกัน อาจนำไปสู่อัตราความผิดพลาดที่เพิ่มขึ้นหรือความสนใจที่ลดลง</p>
+<p>ซึ่งนำไปสู่อุบัติเหตุ อันตรายต่อสุขภาพที่เกี่ยวข้องกับงาน ประสิทธิภาพการทำงานที่ลดลง และท้ายที่สุดก่อให้เกิดต้นทุนทางเศรษฐกิจแก่บริษัท</p>
+<div class="note">→ เสียงในที่ทำงานจึงมีผลกระทบเชิงลบในระยะยาว!</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">เสียงดัง (Noise) 2</span><span class="pnum">หน้า 72 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-072.jpg"></div>
+<div class="translation">
+<ul>
+<li>ผู้ที่ทำงานในพื้นที่เสียงดังควรตระหนักถึงระดับความดัง</li>
+<li>เสียงต่อเนื่อง (มากกว่า 85 dB) โดยไม่มีมาตรการป้องกันจะนำไปสู่การสูญเสียการได้ยิน</li>
+<li>พื้นที่เสียงดังภายในบริษัทต้องถูกทำเครื่องหมาย และต้องใช้มาตรการป้องกันที่นายจ้างจัดเตรียมให้!</li>
+<li>ต้องสวมอุปกรณ์ป้องกันการได้ยิน (เมื่อถึงระดับกระตุ้นหรือสูงกว่า)</li>
+<li>สำคัญที่เสียงต้องไม่กระทบความสามารถในการสื่อสาร!</li>
+<li>ความเสียหายทางกายภาพจากเสียงมักไม่สามารถแก้ไขได้</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ควันและฝุ่นละออง</span><span class="pnum">หน้า 73 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-073.jpg"></div>
+<div class="translation">
+<p>งานซ่อมบำรุงอากาศยานหรือชิ้นส่วนย่อมเกี่ยวข้องกับของเหลวและสารเคมีหลากหลายชนิดโดยธรรมชาติ เช่น น้ำมันหล่อลื่นและจาระบี เช่น น้ำมันไฮดรอลิก สี น้ำยาทำความสะอาด หรือแม้แต่เชื้อเพลิงอากาศยาน</p>
+<p>สารส่วนใหญ่ปล่อยควันในรูปแบบใดรูปแบบหนึ่ง บางชนิดสังเกตได้ชัดจากกลิ่น บางชนิดไม่มีกลิ่น ไอระเหยสามารถก่อให้เกิดปัญหาสุขภาพ เช่น ระคายเคืองตา ไอระเหยพิษบางชนิดมีผลกระทบต่อสุขภาพที่ร้ายแรง</p>
+<p>ผลกระทบยิ่งรุนแรงขึ้นเมื่อต้องทำงานในพื้นที่เล็กหรือระบายอากาศไม่ดี เช่น การทำงานในถังเชื้อเพลิงอาจต้องใช้เครื่องช่วยหายใจ ขึ้นอยู่กับความเข้มข้นของไอระเหย หากพบควันอันตราย ต้องแจ้งเพื่อนร่วมงานและหัวหน้างานทันที</p>
+<div class="note">→ เมื่อทำงานกับของเหลวและสารเคมี งานเจียร หรืองานเกี่ยวกับระบบเบรก (มีฝุ่น/อนุภาคนาโน) ต้องปฏิบัติตามมาตรการป้องกันที่เหมาะสม (ชุดป้องกัน มาตรการป้องกัน หรือการระบายอากาศในห้องที่เพียงพอ) นายจ้างต้องมั่นใจว่าปฏิบัติตาม “ข้อกำหนดของระเบียบสารอันตราย (Hazardous Substances Ordinance)” และแจ้งพนักงานเกี่ยวกับการจัดการสารเหล่านี้</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แสงสว่าง (Light)</span><span class="pnum">หน้า 74 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-074.jpg"></div>
+<div class="translation">
+<p>เพื่อทำงานอย่างปลอดภัยและมีประสิทธิภาพ จำเป็นอย่างยิ่งที่ต้องทำงานภายใต้สภาพแสงที่เหมาะสม จอตาต้องการแสงที่ดีเพื่อแยกแยะรายละเอียดเล็กๆ และการมองเห็นสีก็ต้องการความเข้มแสงที่เพียงพอและเหมาะสมเช่นกัน แสงที่ไม่เหมาะสมหรือไม่เพียงพออาจนำไปสู่ข้อผิดพลาดในการทำงาน!</p>
+<p>งานบนหรือในอากาศยานมักทำโดยใช้แสงเทียมเฉพาะจุด</p>
+<ul>
+<li>ให้เวลาจัดแสงในพื้นที่ทำงานให้ดีและเพียงพอ (โดยเฉพาะงานตรวจสอบด้วยสายตา)</li>
+<li>ไฟฉายคาดศีรษะช่วยได้ในพื้นที่จำกัด (อย่าลืมถอดออกเมื่อออกจากพื้นที่!)</li>
+<li>แหล่งกำเนิดแสงเทียมมีความเข้มไม่เท่ากับแสงกลางวันปกติ</li>
+<li>ความต้องการแสงที่เพียงพอเพิ่มขึ้นตามอายุ</li>
+<li>แสงสำหรับงาน (task lighting) ต้องสว่างเพียงพอต่องานที่ทำ</li>
+<li>หลีกเลี่ยงการรบกวนจากแสงสะท้อน (glare)</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">สภาพอากาศและอุณหภูมิ</span><span class="pnum">หน้า 75 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-075.jpg"></div>
+<div class="translation">
+<p>มนุษย์สามารถทำงานได้ในช่วงอุณหภูมิและสภาพอากาศที่ค่อนข้างกว้าง หากสวมเสื้อผ้าที่เหมาะสม สามารถอยู่กลางแจ้งได้แม้ที่ -40 องศาเซลเซียส แต่แน่นอนว่าสภาพที่รุนแรงย่อมจำกัดสมรรถนะ!</p>
+<p>งานอากาศยานส่วนใหญ่ทำกลางแจ้ง ช่างเทคนิคในตะวันออกกลางต้องเผชิญสภาพที่แตกต่างจากผู้ที่ทำงานท่ามกลางลมและความหนาวเย็นในนอร์เวย์ แม้ในโรงเก็บอากาศยาน ก็ยังต้องเผชิญอิทธิพลของภูมิอากาศในภูมิภาคนั้นๆ เพราะประตูโรงเก็บเปิด-ปิดอยู่ตลอดเวลา โดยทั่วไปคนจะปรับตัวเข้ากับภูมิภาคของตนเองและพยายามรับมือกับมัน</p>
+<p>สภาพแวดล้อมการทำงานควรเอื้อให้งานซ่อมบำรุงหรือตรวจสอบดำเนินไปได้โดยไม่มีสิ่งรบกวนที่ไม่จำเป็น หากระดับอุณหภูมิ ความชื้น ลูกเห็บ น้ำแข็ง หิมะ ลม แสง ฝุ่น หรือมลพิษทางบรรยากาศอื่นๆ ที่ยอมรับไม่ได้จำกัดกิจกรรม ต้องหยุดงานหรือดำเนินมาตรการที่เหมาะสมจนกว่าสภาพจะกลับสู่ระดับที่น่าพอใจ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ข้อกำหนดของ EASA</span><span class="pnum">หน้า 76 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-076.jpg"></div>
+<div class="translation">
+<p>หน้านี้แสดงข้อกำหนดของ EASA ที่เกี่ยวข้องกับสภาพแวดล้อมทางกายภาพในการทำงาน — ดูรายละเอียดในภาพต้นฉบับประกอบ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การสั่นสะเทือน (Oscillations and Vibration)</span><span class="pnum">หน้า 77 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-077.jpg"></div>
+<div class="translation">
+<p>ช่างเทคนิคซ่อมบำรุงอากาศยานมักใช้แท่นเคลื่อนที่เพื่อเข้าถึงส่วนต่างๆ ของอากาศยาน ยิ่งแท่นสูงขึ้นก็ยิ่งมีแนวโน้มไม่มั่นคง เช่น เมื่อทำงานบนที่สูงด้วยแท่นยกแบบกรรไกร (scissor lift) ความรู้สึกไม่มั่นคงนี้อาจทำให้ช่างเทคนิคเสียสมาธิและนำไปสู่ข้อผิดพลาดในการทำงาน!</p>
+<p>นอกจากนี้ แรงสั่นสะเทือนอาจเกิดจากการใช้เครื่องมือหมุนหรือกระแทกและอุปกรณ์เสริม ซึ่งอาจทำให้มือและแขนล้าเร็วขึ้น</p>
+<p>เสียงความถี่ต่ำ (infrasound) เช่นที่เกิดจากเครื่องยนต์อากาศยาน ก็สามารถก่อให้เกิดแรงสั่นสะเทือนได้เช่นกัน ร่างกายมนุษย์ดูดซับส่วนใหญ่ไว้ แต่แรงสั่นสะเทือนสามารถนำไปสู่ความล้า ขาดสมาธิ หรือปัญหาสุขภาพระยะยาว Infrasound รับรู้ได้เฉพาะที่ระดับความดันเสียงสูงเท่านั้น</p>
+<p>แรงสั่นสะเทือนความถี่ต่ำที่อาจเกิดร่วมกับ infrasound สามารถทำให้เกิดเลือดออกเฉพาะจุดในอวัยวะภายในหากสัมผัสเป็นเวลานานและระดับสูงมาก แม้ต่ำกว่าระดับสูงมากเหล่านี้ เช่นเดียวกับการสัมผัสเสียงทั่วไป ผลทางจิตใจ (โดยเฉพาะสมาธิลดลงหรือความดันโลหิตเพิ่มขึ้น) ก็ยังเป็นไปได้เช่นกัน</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">สภาพแวดล้อมการทำงาน (สรุป)</span><span class="pnum">หน้า 78 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-078.jpg"></div>
+<div class="translation">
+<p>หมายถึงปัจจัยทั้งหมดที่เกี่ยวข้องกับสถานที่ทำงานของช่างเทคนิค ซึ่งอาจส่งผลกระทบต่อความสามารถในการทำงานอย่างปลอดภัยและมีประสิทธิภาพ</p>
+<p>องค์กรมีหน้าที่สร้างเงื่อนไขที่จำเป็นสำหรับการทำงานที่ปลอดภัยและมีประสิทธิภาพ พนักงานมีหน้าที่ให้ความร่วมมือและรายงานข้อบกพร่องใดๆ ที่พบ</p>
+<ul>
+<li>การออกแบบสถานที่ทำงานและข้อกำหนดด้านการยศาสตร์ (Ergonomics)</li>
+<li>ความสะอาดและความเป็นระเบียบทั่วไป (เช่น พื้นที่เก็บเครื่องมือ ที่เก็บชิ้นส่วน ฯลฯ)</li>
+<li>การเข้าถึงเอกสารทางเทคนิคและการเก็บข้อมูล (การบันทึกข้อบกพร่อง ระบบบันทึก logbook ฯลฯ)</li>
+<li>การจัดหาและใช้อุปกรณ์ความปลอดภัยและป้ายสัญลักษณ์ (พื้นกันลื่น เข็มขัดนิรภัย ฯลฯ)</li>
+<li>การจัดเก็บ การติดฉลากที่ชัดเจน และการใช้สารเคมีและของเหลวที่เป็นพิษ</li>
+<li>ห้องพักและห้องพักเบรก</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ปัจจัยที่เกี่ยวข้องกัน</span><span class="pnum">หน้า 79 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-079.jpg"></div>
+<div class="translation">
+<p>แผนภาพแสดงความสัมพันธ์ระหว่าง 3 ปัจจัยหลัก: <strong>สภาพแวดล้อมทางสังคม (Social Environment)</strong>, <strong>สภาพแวดล้อมทางกายภาพ (Environment)</strong>, และ<strong>งาน (Tasks)</strong> ซึ่งล้วนส่งผลต่อกันและกันในบริบทของงานซ่อมบำรุง</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การตระหนักรู้สถานการณ์ (Situation Awareness)</span><span class="pnum">หน้า 80 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-080.jpg"></div>
+<div class="translation">
+<p><strong>Situation Awareness</strong> หมายถึงสภาวะการตระหนักรู้ถึงสิ่งแวดล้อมรอบตัว ในงานซ่อมบำรุงหมายถึงตัวอย่างเช่น:</p>
+<ul>
+<li>การรับรู้และประมวลผลข้อมูลที่ได้รับด้วยวาจา</li>
+<li>การรับรู้วัตถุในสิ่งแวดล้อม — การเห็นชิ้นส่วนหลวม ความเสียหาย หรือรอยรั่ว</li>
+<li>ความเข้าใจความหมาย (เช่น ทำไมถึงเป็นแบบนี้? ควรเป็นแบบนี้หรือไม่?)</li>
+<li>การคาดการณ์การเปลี่ยนแปลงของสิ่งแวดล้อมและสภาพในอนาคตของวัตถุได้อย่างแม่นยำในช่วงเวลาที่เพียงพอ (projection) เช่น ผลกระทบในอนาคตต่อความปลอดภัย กำหนดการ และความสมควรเดินอากาศ</li>
+</ul>
+<p>การได้รับ<strong>ผลป้อนกลับ (Feedback)</strong> ช่วยเพิ่มความตระหนักรู้สถานการณ์</p>
+<p style="text-align:center; font-weight:bold;">การรับรู้ (Perception) → ความเข้าใจ (Understanding) → การคาดการณ์/วิเคราะห์ (Prediction/Analysis) → การกระทำ (Action)</p>
+<ul>
+<li>ความสามารถในการเข้าใจสถานการณ์</li>
+<li>ประเมินได้ถูกต้องผ่านการฝึกอบรมและประสบการณ์</li>
+<li>กระทำได้อย่างเหมาะสม</li>
+</ul>
+<div class="note">➔ <strong>ความสามารถในการกระทำ (Competence to act)</strong></div>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-6" class="module-section">
+<h2 class="section-title">Module 9.6 Tasks</h2>
+
+<div class="toc">หัวข้อ: งานที่ใช้แรงกาย, งานประจำและความประมาทเลินเล่อ (Complacency), การตรวจสอบด้วยสายตา, ระบบที่ซับซ้อน, แบบจำลอง SHELL, 10 บัญญัติของช่างเทคนิคที่รับผิดชอบ</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 81 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-081.jpg"></div>
+<div class="translation"><h4>บทที่ 9.6 — งาน (Tasks)</h4></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม</span><span class="pnum">หน้า 82 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-082.jpg"></div>
+<div class="translation">
+<ul>
+<li>งานที่ใช้แรงกาย (Physical work)</li>
+<li>งานที่ทำซ้ำๆ และความประมาทเลินเล่อ (Repetitive tasks, complacency)</li>
+<li>การตรวจสอบด้วยสายตา (Visual inspection)</li>
+<li>ระบบที่ซับซ้อน (Complex systems)</li>
+<li>งานซ่อมบำรุงที่สำคัญและวิธีตรวจจับข้อผิดพลาด (Critical maintenance tasks and error-capturing methods)</li>
+<li>เอกสารทางเทคนิค: การเข้าถึง การใช้งาน และคุณภาพ</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">บทนำ (Introduction)</span><span class="pnum">หน้า 83 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-083.jpg"></div>
+<div class="translation">
+<p>ในงานซ่อมบำรุงอากาศยาน งานประจำวันของพนักงานอาจแตกต่างกันมาก การวางแผนที่สมจริง การจัดระเบียบ และการสื่อสารที่ดี ช่วยให้งานสำเร็จตรงเวลาและปลอดภัย ซึ่งช่วยลดภาระงานและความเครียดของผู้ที่เกี่ยวข้อง</p>
+<p>ก่อนเริ่มงาน พนักงานแต่ละคนต้องถามตัวเองด้วย: ต้องทำอะไรบ้าง? มีทรัพยากรพร้อมสำหรับทำงานให้มีประสิทธิผลหรือไม่?</p>
+<ul>
+<li>บุคลากรเพียงพอ</li>
+<li>เอกสาร (AMM, work package หรือ task sheets)</li>
+<li>อุปกรณ์/เครื่องมือ/อะไหล่</li>
+<li>สิ่งอำนวยความสะดวก (บันได ห้องอบแห้ง ไฟส่องสว่าง ฯลฯ)</li>
+</ul>
+<p>ฉันมีทักษะ ความรู้ และประสบการณ์ที่จำเป็นหรือไม่?</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">งานที่ใช้แรงกาย (Physical Work)</span><span class="pnum">หน้า 84 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-084.jpg"></div>
+<div class="translation">
+<p>งานซ่อมบำรุงอากาศยานเป็นอาชีพที่ต้องเคลื่อนไหวร่างกายมาก บางงานต้องการทักษะกล้ามเนื้อมัดเล็กและความแม่นยำ ในขณะที่บางงานต้องการความแข็งแรงและความอดทน สำหรับบางงานจำเป็นต้องทำงานเป็นคู่หรือใช้เครื่องมือช่วย</p>
+<p>งานที่ใช้แรงกายและจิตใจเป็นเวลานานนำไปสู่ความล้า เพื่อให้ได้พักผ่อนเพียงพอ ต้องปฏิบัติตามช่วงพักที่กำหนดไว้</p>
+<div class="note">→ ดังที่กล่าวไปแล้ว ทุกคนต้องรับผิดชอบต่อความฟิตและสุขภาพของตนเอง</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความประมาทเลินเล่อ (Complacency)</span><span class="pnum">หน้า 85 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-085.jpg"></div>
+<div class="translation">
+<p>งานที่ทำซ้ำๆ อาจน่าเบื่อและกลายเป็นเรื่องจำเจได้อย่างรวดเร็ว งานกายภาพที่ซ้ำซากหรือแม้แต่การตรวจสอบด้วยสายตาเป็นเวลานานก็นำไปสู่ความล้า เพิ่มความเสี่ยงบาดเจ็บและโอกาสเกิดข้อผิดพลาด</p>
+<p>นอกจากความล้าทางกายแล้ว ยังมีความเสี่ยงจาก:</p>
+<ul>
+<li>การละเลยเอกสาร</li>
+<li>ความประมาทเลินเล่อ ข้ามขั้นตอน แก้ไขขั้นตอนการทำงานเอง</li>
+<li>ความคาดหวังที่ผิดพลาดระหว่างการตรวจสอบด้วยสายตา มองข้ามข้อผิดพลาด</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การตรวจสอบด้วยสายตา (Visual Inspection)</span><span class="pnum">หน้า 86 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-086.jpg"></div>
+<div class="translation">
+<p>การตรวจสอบด้วยสายตาเป็นองค์ประกอบสำคัญของงานซ่อมบำรุงอากาศยาน มีการใช้อุปกรณ์ช่วยต่างๆ (ไฟ กระจก แว่นขยาย และกล้องส่องตรวจ) เพื่อเพิ่มความสามารถในการมองเห็น การตรวจสอบด้วยสายตายังได้รับการสนับสนุนจากประสาทสัมผัสอื่นด้วย เช่น การสัมผัสเพื่อรู้สึกถึงความไม่เรียบ หรือค้นหาการเคลื่อนไหวที่ไม่คาดคิดหรือชิ้นส่วนหลวม</p>
+<h4>ประเด็นสำคัญของการตรวจสอบด้วยสายตาและการประเมินข้อบกพร่อง:</h4>
+<ul>
+<li>การเข้าถึงที่ปลอดภัยและแสงสว่างเพียงพอ</li>
+<li>ความรู้เกี่ยวกับระบบและเนื้อหาที่เกี่ยวข้อง</li>
+<li>มาตรการความปลอดภัย!</li>
+<li>สามัญสำนึก</li>
+<li>แนวทางที่เป็นระบบ</li>
+<li>ประสบการณ์</li>
+<li>ความคาดหวัง</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ระบบที่ซับซ้อน — งานซ่อมบำรุงอากาศยาน</span><span class="pnum">หน้า 87 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-087.jpg"></div>
+<div class="translation">
+<p>อากาศยานสมัยใหม่เป็นระบบที่ซับซ้อนโดยรวม ประกอบด้วยระบบย่อยที่แยกจากกันและซับซ้อนจำนวนมาก (เช่น ระบบควบคุมการบิน ล้อลงจอด ระบบปรับอากาศ ระบบเอวิโอนิกส์) หน้าที่โดยรวมและความสัมพันธ์ระหว่างระบบต่างๆ ไม่ใช่เรื่องง่ายที่จะเข้าใจเมื่อทำการตรวจสอบ ทดสอบการทำงาน และเปลี่ยน/ดัดแปลง/ซ่อมแซมชิ้นส่วน</p>
+<p>โดยทั่วไปช่างเทคนิคได้รับการฝึกอบรมเฉพาะระบบ และมีความรู้เชิงลึกตามหมวดหมู่ของตน ปัญหาที่ซับซ้อนควรถูกแบ่งเป็นส่วนย่อยที่จัดการได้ในขั้นตอนวางแผนตามหลักการที่ดี อย่างไรก็ตาม การวินิจฉัยปัญหา (troubleshooting) ต้องอาศัยทักษะการวิเคราะห์</p>
+<p>สถานการณ์ยิ่งยากขึ้นเมื่อต้องจัดการกับอากาศยานหลายรุ่นที่อาจใช้เทคโนโลยีต่างกัน นอกจากนี้ ในงาน Base Maintenance หลายฝ่ายและหลายทีมมักทำงานพร้อมกันบนอากาศยานลำเดียวตลอด 24/7! จึงต้องมีการกำกับดูแลและการประสานงาน!</p>
+<div class="note">→ งานบางอย่างต้องมีการตรวจสอบซ้ำโดยอิสระ (critical/independent inspection) ในกรณีเหล่านี้ต้องปฏิบัติตามคำสั่งงานและเอกสารภายในบริษัทที่เกี่ยวข้อง! เอกสารการทำงานทุกฉบับต้องถูกบันทึกไว้ในเอกสารประกอบ!</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ระบบที่ซับซ้อน — Type Rating</span><span class="pnum">หน้า 88 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-088.jpg"></div>
+<div class="translation">
+<p class="en">อ้างอิง: AMC to Section 1 of Appendix III to Part-66 – 'Aircraft Type Training and Examination Standard - On-the-Job Training'</p>
+<p>หัวข้อการฝึกอบรมครอบคลุม: การออกแบบรุ่นและตัวแปรที่เกี่ยวข้อง เทคโนโลยีและเทคนิคใหม่, ผลป้อนกลับจากปัญหาการใช้งานจริงและการรายงานเหตุการณ์, คำสั่งความสมควรเดินอากาศ (AD) และ service bulletins ที่สำคัญ, ปัญหา Human Factors ที่รู้จักในรุ่นนั้นๆ, การใช้เอกสารทั่วไปและเฉพาะ (MMEL, AMM, MPD, TSM, SRM, WD, AFM, คู่มือเครื่องมือ) และแนวคิดการวินิจฉัยปัญหา</p>
+<p>ความรู้เกี่ยวกับระบบรายงานบนเครื่องด้านซ่อมบำรุงและเงื่อนไข ETOPS (ถ้ามี), การใช้เครื่องมือพิเศษและอุปกรณ์ทดสอบ รวมถึงแนวปฏิบัติซ่อมบำรุงเฉพาะที่ครอบคลุมรายการความปลอดภัยวิกฤตและมาตรการป้องกัน, งาน/ประเด็นสำคัญและวิกฤตจาก MMEL, CDL, ความปลอดภัยถังเชื้อเพลิง (FTS), ข้อจำกัดความสมควรเดินอากาศ (ALI) รวมถึง CDCCL, CMR และเอกสาร ICA ทั้งหมด เช่น MRB, MPD, SRM, AMM</p>
+<p>มาตรการและขั้นตอนซ่อมบำรุงที่ต้องปฏิบัติตามอันเนื่องมาจากข้อกำหนดการรับรองเฉพาะ, ความรู้เกี่ยวกับการตรวจสอบและข้อจำกัดที่เกี่ยวข้องกับผลกระทบจากปัจจัยสิ่งแวดล้อมหรือขั้นตอนปฏิบัติการ เช่น สภาพอากาศร้อน/เย็น ลม ความชื้น ทราย การละลาย/ป้องกันน้ำแข็ง เป็นต้น</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ระบบที่ซับซ้อน — องค์กรซ่อมบำรุง / แบบจำลอง SHELL</span><span class="pnum">หน้า 89 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-089.jpg"></div>
+<div class="translation">
+<p>แบบจำลองที่นิยมใช้แสดงระบบที่ซับซ้อนในที่ทำงานคือแบบจำลอง <strong>SHELL</strong></p>
+<p>แบบจำลอง SHELL แสดงมนุษย์ [L] เป็นผู้กระทำหลักที่มีปฏิสัมพันธ์กับสภาพแวดล้อมการทำงาน ประกอบด้วยองค์ประกอบ: <strong>[S]</strong> (เช่น นโยบาย ขั้นตอนปฏิบัติงาน), <strong>[H]</strong> (เช่น เครื่องมือวัด อุปกรณ์), <strong>[E]</strong> (เช่น สภาพทางการเงิน), และ <strong>[L]</strong> บุคคลอื่นที่เกี่ยวข้อง</p>
+<div class="note">→ แบบจำลอง SHELL เป็นแบบจำลองสำหรับตรวจสอบปฏิสัมพันธ์ระหว่างมนุษย์กับบุคคลอื่นและอุปกรณ์ทางเทคนิคในสภาพแวดล้อมการทำงานเฉพาะ ตั้งอยู่บนสมมติฐานว่าอุบัติเหตุสามารถอธิบายได้ด้วยปฏิสัมพันธ์ที่ซับซ้อนของปัจจัยมนุษย์ เทคนิค ปฏิบัติการ และสิ่งแวดล้อม</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">10 บัญญัติของช่างเทคนิคอากาศยานที่รับผิดชอบ</span><span class="pnum">หน้า 90 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-090.jpg"></div>
+<div class="translation">
+<ol>
+<li>ใช้เฉพาะเอกสารซ่อมบำรุงที่ได้รับอนุมัติเท่านั้น (work cards, AMM)</li>
+<li>ใช้เฉพาะแนวปฏิบัติซ่อมบำรุงที่ผ่านการพิสูจน์และทดสอบแล้ว (ห้าม "ทางลัด/walkaround")</li>
+<li>ห้ามเซ็นรับรองงานที่ตนเองไม่ได้ทำและ/หรือไม่ได้ตรวจสอบด้วยตนเอง</li>
+<li>ยืนยันแต่ละขั้นตอนงานทันทีหลังทำงานเสร็จ</li>
+<li>ใช้เฉพาะเครื่องมือที่ได้รับอนุมัติ ลงนามถูกต้อง และตรวจสอบสอบเทียบแล้ว</li>
+<li>ใช้เฉพาะอะไหล่ที่ได้รับอนุมัติ (แคตตาล็อกอะไหล่ เอกสารประกอบ)</li>
+<li>ปฏิบัติเฉพาะงานที่มีความชำนาญและ/หรือได้รับการฝึกอบรมมาแล้วเท่านั้น</li>
+<li>ห้ามเบี่ยงเบนจากวิธีการที่กำหนดไว้เด็ดขาด</li>
+<li>รักษาความฟิตของตนเอง (ทั้งจิตใจและร่างกาย) — ฝึกอบรมต่อเนื่องและดูแลสุขภาพ</li>
+<li>ตรวจสอบเครื่องมือของตนเองว่าครบถ้วนสมบูรณ์เสมอหลังทำงานเสร็จ และตรวจสอบพื้นที่ทำงานหาวัตถุแปลกปลอม (FOD — สกรู เครื่องมือ ผ้าเช็ดทำความสะอาด)</li>
+</ol>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-7" class="module-section">
+<h2 class="section-title">Module 9.7 Communication</h2>
+
+<div class="toc">หัวข้อ: นิยามการสื่อสาร, ผู้ส่ง-ผู้รับสาร, การสื่อสารภายใน/ระหว่างทีม, การส่งมอบงานระหว่างกะ, ปัญหาการสื่อสาร, กฎการสื่อสาร, การสื่อสารเป็นลายลักษณ์อักษร, การเผยแพร่ข้อมูลและการรักษาความทันสมัย</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 91 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-091.jpg"></div>
+<div class="translation"><h4>บทที่ 9.7 — การสื่อสาร</h4></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม</span><span class="pnum">หน้า 92 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-092.jpg"></div>
+<div class="translation">
+<ul>
+<li>การสื่อสารภายในและระหว่างทีม (Within and between teams)</li>
+<li>การส่งมอบงานระหว่างกะ (Shift handover)</li>
+<li>การบันทึกและจดบันทึกงาน (Work logging and recording)</li>
+<li>การรักษาความทันสมัยของความรู้ (Keeping up to date, currency)</li>
+<li>การเผยแพร่ข้อมูล (Dissemination of information)</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">นิยามการสื่อสาร</span><span class="pnum">หน้า 93 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-093.jpg"></div>
+<div class="translation">
+<table class="tf">
+<tr><th>ประเภท</th><th>ตัวอย่าง</th></tr>
+<tr><td><strong>วัจนภาษา (Verbal)</strong></td><td>การพูด (spoken)</td></tr>
+<tr><td><strong>อวัจนภาษา — ภาษากาย</strong></td><td>ท่าทาง สีหน้า การสัมผัส</td></tr>
+<tr><td><strong>สัญลักษณ์ (Symbolic)</strong></td><td>“ยกนิ้วโป้ง” การเคลื่อนไหวมือ การพยักหน้า</td></tr>
+<tr><td><strong>ลายลักษณ์อักษร (Written)</strong></td><td>ข้อความ/ตัวเขียน</td></tr>
+<tr><td><strong>ภาพ (Graphic)</strong></td><td>ภาพ แผนภาพ ภาพวาด เครื่องมือวัดในห้องนักบิน</td></tr>
+</table>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ผู้ส่งสาร ↔ ผู้รับสาร</span><span class="pnum">หน้า 94 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-094.jpg"></div>
+<div class="translation">
+<p>เราสื่อสารกันแทบตลอดเวลา ไม่ว่าจะรู้ตัวหรือไม่ก็ตาม เป็นการแลกเปลี่ยนอย่างต่อเนื่องของ:</p>
+<ul>
+<li>ข้อมูล</li>
+<li>ความคิด</li>
+<li>อารมณ์</li>
+<li>ทัศนคติและความเชื่อ</li>
+</ul>
+<p>ในฐานะผู้ส่งสาร โดยปกติคุณคาดหวังการยืนยันจากผู้รับ... แต่ผู้รับรับรู้ถึงสารนั้นจริงหรือไม่?</p>
+<ul>
+<li>ได้ยิน เข้าใจ เห็นด้วยหรือไม่?</li>
+<li>ใช้ช่องทางการสื่อสารเดียวกันหรือไม่</li>
+<li>ความคาดหวังของผู้รับสาร</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การสื่อสารแบบอวัจนภาษา</span><span class="pnum">หน้า 95 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-095.jpg"></div>
+<div class="translation">
+<p>การสื่อสารแบบอวัจนภาษามาพร้อมกับการสื่อสารด้วยคำพูด และสามารถใช้ได้เมื่อการสื่อสารด้วยคำพูดเป็นไปไม่ได้ เช่น การพยักหน้าในสภาพแวดล้อมที่มีเสียงดัง</p>
+<p>การสื่อสารแบบอวัจนภาษายังเป็นรูปแบบหลักของตัวบ่งชี้สถานะ/ระบบของอากาศยานด้วย</p>
+<div class="note">→ การสื่อสารแบบอวัจนภาษา (ภาษากาย) ละเอียดอ่อนมาก แต่ก็มักทรงพลังมากเช่นกัน</div>
+<p>ตัวอย่างเช่น คำว่า “ไม่” ที่พูดพร้อมรอยยิ้ม จะถูกตีความต่างไปจากคำเดียวกันที่พูดขณะผู้ส่งสารทำหน้าบึ้งตึง</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การสื่อสารภายในทีมและระหว่างทีม 1</span><span class="pnum">หน้า 96 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-096.jpg"></div>
+<div class="translation">
+<div class="note">→ งานซ่อมบำรุงอากาศยานเกี่ยวข้องกับการทำงานเป็นทีมทั้งหมด! การสื่อสารเป็นส่วนสำคัญของทีม</div>
+<p>บุคคลภายในทีมต้องแลกเปลี่ยนข้อมูล และต้องให้/รับคำสั่งซึ่งกันและกัน</p>
+<p>นอกจากนี้ ทีมต้องสื่อสารงานให้อีกทีมหนึ่งทราบระหว่างการส่งมอบงานตอนเปลี่ยนกะ ในรูปแบบข้อมูลลายลักษณ์อักษร รายงานสถานการณ์ หรือรายงานสถานะ</p>
+<p>ช่างเทคนิคต้องมีความเข้าใจที่ดีในกระบวนการสื่อสารต่างๆ และรู้ว่าอะไรอาจผิดพลาดได้</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การสื่อสารภายในทีมและระหว่างทีม 2 — กฎทองคำ</span><span class="pnum">หน้า 97 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-097.jpg"></div>
+<div class="translation">
+<h4>กฎทองคำของการสื่อสารในทีม:</h4>
+<ul>
+<li>บรีฟก่อนเริ่มงาน — ถามว่า “ต้องทำอะไร ใครเกี่ยวข้อง กรอบเวลาเท่าไร ฯลฯ”</li>
+<li>แจ้งให้สมาชิกทีมทราบข้อมูลล่าสุดหากพวกเขามีส่วนเกี่ยวข้องกับงาน</li>
+<li>ยืนยันการกระทำหรือความตั้งใจ หรือมั่นใจว่าผู้อื่นได้รับแจ้งอย่างถูกต้องแล้ว</li>
+<li>พูดออกมา — หากต้องการความช่วยเหลือหรือความชัดเจน</li>
+<li>รายงานเมื่อสิ่งใดเริ่มมีความสำคัญด้านเวลาหรือเกิดปัญหาขึ้น</li>
+<li>เมื่อจบงาน — บันทึกและรายงานความสำเร็จของงาน และมั่นใจว่ามีการส่งมอบงานอย่างเหมาะสม</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การสื่อสาร (การส่งมอบงาน)</span><span class="pnum">หน้า 98 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-098.jpg"></div>
+<div class="translation">
+<p>การสื่อสารมีความสำคัญอย่างยิ่งในงานซ่อมบำรุงอากาศยาน ช่วยให้สามารถสื่อสารงานและสถานการณ์ปัจจุบันได้ (เช่น ระหว่างการเปลี่ยนกะ):</p>
+<ul>
+<li>งานที่เสร็จสมบูรณ์แล้ว</li>
+<li>งานที่กำลังดำเนินการ สถานะ ปัญหาที่พบ การสั่งวัสดุ ฯลฯ</li>
+<li>งานที่ยังต้องทำต่อ</li>
+<li>ข้อมูลทั่วไป</li>
+<li>สถานการณ์ที่มีความสำคัญด้านความปลอดภัย</li>
+</ul>
+<p>สถานการณ์ปัจจุบันจะถูกพิจารณาโดยอ้างอิงจากเอกสารลายลักษณ์อักษร (บัตรงานซ่อมบำรุง ขั้นตอนปฏิบัติ ใบสั่งงาน บันทึก ฯลฯ) และสัญญาณเตือน/มาตรการป้องกันที่ติดตั้งและบันทึกไว้ สิ่งเหล่านี้ช่วยให้เกิดบันทึกที่ชัดเจน กล่าวคือมอบความสามารถในการตรวจสอบย้อนกลับและความโปร่งใส</p>
+<div class="note">→ สำคัญมากที่การส่งมอบงานต้องดำเนินไปด้วยเวลาที่เพียงพอ ไม่รีบเร่ง</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ปัญหาการสื่อสาร</span><span class="pnum">หน้า 99 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-099.jpg"></div>
+<div class="translation">
+<ul>
+<li>ลืมแบ่งปันข้อมูลที่เกี่ยวข้อง</li>
+<li>ข้อความไม่ได้ถูกส่งต่ออย่างถูกต้อง</li>
+<li>ข้อมูลหรือบันทึกลายลักษณ์อักษรอ่านไม่ออก</li>
+<li>ข้อความที่พูดถูกตีความผิดพลาด</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">กฎการสื่อสาร</span><span class="pnum">หน้า 100 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-100.jpg"></div>
+<div class="translation">
+<h4>ในฐานะผู้ส่งสาร</h4>
+<ul>
+<li>รับผิดชอบต่อสิ่งที่คุณพูด — พูดในมุมมองบุรุษที่หนึ่ง</li>
+<li>มั่นใจในตนเอง! พูดในสิ่งที่คุณหมายถึง</li>
+<li>ทำให้ความตั้งใจของคุณชัดเจน</li>
+<li>สื่อสารอย่างชัดเจน</li>
+<li>ปรับให้เข้ากับผู้ฟัง — รักษาความเคารพ</li>
+<li>สร้างสรรค์</li>
+<li>ใช้ภาษากายเชิงบวก — รักษาความเป็นมืออาชีพ</li>
+</ul>
+<h4>ในฐานะผู้รับสาร</h4>
+<ul>
+<li>หันไปหาผู้ส่งสาร</li>
+<li>ฟังอย่างตั้งใจ (Active listening)</li>
+<li>ไม่ขัดจังหวะ</li>
+<li>ถามคำถาม -> เพื่อความชัดเจนของเนื้อหา</li>
+<li>ใช้ภาษากายเชิงบวก — รักษาความเป็นมืออาชีพ</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การสื่อสารแบบลายลักษณ์อักษร</span><span class="pnum">หน้า 101 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-101.jpg"></div>
+<div class="translation">
+<p>ในสภาพแวดล้อมการทำงานของคุณ เอกสารลายลักษณ์อักษรมีปริมาณมาก ทั้งบัตรงาน คำสั่ง คู่มือ และบันทึก logbook บันทึกลายลักษณ์อักษรเป็นหนึ่งในแง่มุมที่สำคัญที่สุดของการสื่อสารในงานซ่อมบำรุง</p>
+<h4>สิ่งสำคัญเมื่อสื่อสารข้อมูลเป็นลายลักษณ์อักษร:</h4>
+<ul>
+<li>ข้อความอ่านออกชัดเจน</li>
+<li>ให้มากเท่าที่จำเป็น น้อยเท่าที่จะเป็นไปได้</li>
+<li>เขียนอย่างชัดเจน</li>
+<li>ปราศจากอารมณ์</li>
+</ul>
+<p><strong>คุณสมบัติสำคัญของบันทึก:</strong> ชัดเจน (Clear), ถูกต้อง (Correct), ครบถ้วน (Complete)</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การเผยแพร่ข้อมูลและการรักษาความทันสมัย</span><span class="pnum">หน้า 102 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-102.jpg"></div>
+<div class="translation">
+<p>อุตสาหกรรมการบินมีพลวัตสูงมาก ช่างเทคนิคต้องอัปเดตและปรับความรู้ของตนอย่างต่อเนื่อง</p>
+<h4>สิ่งที่ต้องติดตามให้ทันสมัย:</h4>
+<ul>
+<li>เทคโนโลยีใหม่และระบบอากาศยานที่ปรับปรุงแล้ว</li>
+<li>เครื่องมือและวิธีปฏิบัติซ่อมบำรุงใหม่</li>
+<li>การเปลี่ยนแปลงของอากาศยานและระบบ — การแก้ไขคู่มือซ่อมบำรุง</li>
+<li>เอกสารข้อมูล บันทึกช่วยจำ และ bulletin</li>
+<li>ขั้นตอนและแนวปฏิบัติซ่อมบำรุงที่ปรับปรุงแล้ว</li>
+<li>กฎระเบียบและข้อบังคับการบิน</li>
+<li>ขั้นตอนปฏิบัติการและ Bulletins</li>
+<li>ประกาศปัจจุบัน จดหมายด้านความปลอดภัย อินทราเน็ต</li>
+<li>ข้อมูลความปลอดภัยและผลป้อนกลับ</li>
+</ul>
+<div class="note">→ องค์กรที่คุณทำงานให้ก็มีความรับผิดชอบในเรื่องนี้เช่นกัน แต่ในฐานะ <strong>“Certifying Staff”</strong> คุณมีความรับผิดชอบส่วนบุคคลในการรักษาความรู้ของตนเองให้ทันสมัยอยู่เสมอ</div>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-8" class="module-section">
+<h2 class="section-title">Module 9.8 Human Error</h2>
+
+<div class="toc">หัวข้อ: แบบจำลองและทฤษฎีข้อผิดพลาด (Swiss Cheese Model), ประเภทข้อผิดพลาดในงานซ่อมบำรุง, การฝ่าฝืนกฎ, ผลกระทบของข้อผิดพลาด, บันไดวัฒนธรรมความปลอดภัย (Hudson), การจัดการข้อผิดพลาดอย่างเปิดเผย, การสอบสวนข้อผิดพลาด<br><em>หมายเหตุ: The Dirty Dozen ย้ายไปเป็นบทเฉพาะ 9.10 ในฉบับปรับปรุงนี้</em></div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 103 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-103.jpg"></div>
+<div class="translation"><h4>บทที่ 9.8 — ความผิดพลาดของมนุษย์</h4></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม</span><span class="pnum">หน้า 104 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-104.jpg"></div>
+<div class="translation">
+<ul>
+<li>แบบจำลองและทฤษฎีข้อผิดพลาด (Error models and theories)</li>
+<li>ประเภทข้อผิดพลาดในงานซ่อมบำรุง (Types of error in maintenance tasks)</li>
+<li>ผลกระทบของข้อผิดพลาด (เช่น อุบัติเหตุ)</li>
+<li>ข้อผิดพลาดระดับองค์กร (Organisational errors)</li>
+<li>การหลีกเลี่ยงและจัดการข้อผิดพลาด (Avoiding and managing errors)</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">บทนำ</span><span class="pnum">หน้า 105 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-105.jpg"></div>
+<div class="translation">
+<p>ไม่มีใครสมบูรณ์แบบ ข้อผิดพลาดของมนุษย์ย่อมเกิดขึ้นได้เสมอ การเข้าใจสาเหตุของข้อผิดพลาดของมนุษย์สามารถลดความเสี่ยง โอกาสเกิด และผลกระทบลงได้</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แบบจำลองข้อผิดพลาด</span><span class="pnum">หน้า 106 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-106.jpg"></div>
+<div class="translation">
+<p>เพื่อระบุประเภทของข้อผิดพลาดที่อาจเกิดขึ้น นักวิจัยได้ศึกษาความผิดพลาดของมนุษย์และพัฒนาแบบจำลองและทฤษฎีต่างๆ ที่พยายามอธิบายลักษณะของข้อผิดพลาดและคุณสมบัติเฉพาะของมัน</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แบบจำลองสวิสชีส (Swiss Cheese Model)</span><span class="pnum">หน้า 107 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-107.jpg"></div>
+<div class="translation">
+<p>แบบจำลอง <strong>“Swiss Cheese”</strong> ของ Reason (1997) ตั้งสมมติฐานว่าอุบัติเหตุมักเกิดขึ้นเมื่อด่านความปลอดภัยหลายชั้นล้มเหลวพร้อมกัน น่าเสียดายที่มาตรการความปลอดภัยต่างๆ ไม่สามารถถูกนำไปปฏิบัติและรับประกันได้อย่างสมบูรณ์แบบ (เช่น มาตรการความปลอดภัยทางเทคนิคล้มเหลว หรือไม่ปฏิบัติตามกฎ) ซึ่งสอดคล้องกับแผ่นเนยแข็งสวิสที่มีรูในภาพประกอบ</p>
+<p>ตราบใดที่ความล้มเหลวเกิดขึ้นเพียงระดับเดียว แต่ระดับอื่นยังคงทำงานได้ผล ความปลอดภัยยังคงรักษาไว้ได้ อย่างไรก็ตาม หากมาตรการความปลอดภัยล้มเหลวในหลายระดับพร้อมกันเนื่องจากเหตุบังเอิญที่โชคร้ายต่อเนื่องกัน (แม้จะพบไม่บ่อย) จะนำไปสู่ความล้มเหลวที่มีผลกระทบกว้างไกล ในภาพประกอบแสดงด้วยลูกศรที่ทะลุผ่านรูของด่านความปลอดภัยทุกระดับ</p>
+<p>Reason (1997) ยังตั้งสมมติฐานว่าความล้มเหลวของด่านความปลอดภัยเกิดจากข้อผิดพลาด 2 ประเภท ได้แก่ ข้อผิดพลาดเชิงรุก (active) และข้อผิดพลาดแฝง (latent)</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ประเภทข้อผิดพลาด — Active &amp; Latent Errors</span><span class="pnum">หน้า 108 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-108.jpg"></div>
+<div class="translation">
+<p>James Reason ยังตั้งสมมติฐานว่าความล้มเหลวของด่านความปลอดภัยเกิดจากข้อผิดพลาด 2 ประเภท:</p>
+<table class="tf">
+<tr><th>ประเภท</th><th>รายละเอียด</th></tr>
+<tr><td><strong>ข้อผิดพลาดเชิงรุก (Active errors)</strong></td><td>ข้อผิดพลาดที่เกิดขึ้นโดยตรงในกระบวนการทำงานหรือผลิตที่จุดเชื่อมต่อมนุษย์-เครื่องจักร เช่น การมองข้าม ความผิดพลาด ฯลฯ ในความหมายของพฤติกรรมที่กระทบความปลอดภัย</td></tr>
+<tr><td><strong>ข้อผิดพลาดแฝง (Latent errors)</strong></td><td>การกระทำที่ผิดพลาดเนื่องจากสาเหตุที่ซ่อนอยู่ในระบบ เช่น ขั้นตอนซ่อมบำรุงหรือซ่อมแซมถูกปฏิบัติผิดพลาดเพราะถูกกำหนดผิดตั้งแต่ขั้นตอนพัฒนา หรือข้อผิดพลาดเกิดจากกำลังคนไม่เพียงพอหรือขาดเครื่องมือพิเศษ</td></tr>
+</table>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">Top 8 ข้อผิดพลาดในงานซ่อมบำรุง</span><span class="pnum">หน้า 109 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-109.jpg"></div>
+<div class="translation">
+<p class="en">ที่มา: การศึกษาของ CAA England สำหรับอากาศยานที่มีน้ำหนักเกิน 5,700 กก.</p>
+<p>ข้อผิดพลาดที่พบบ่อยที่สุด 8 อันดับในงานซ่อมบำรุงอากาศยาน (ดูรายละเอียดลำดับและตัวอย่างในภาพต้นฉบับประกอบ) โดยทั่วไปครอบคลุมประเด็นต่างๆ เช่น การติดตั้งชิ้นส่วน/อะไหล่ผิดพลาด การต่อสายไฟผิด การทิ้งวัตถุหลวมไว้ในอากาศยาน การหล่อลื่นไม่เพียงพอ และแผงหรือฝาครอบที่ไม่ได้ยึดแน่น</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การฝ่าฝืนกฎ (Violation)</span><span class="pnum">หน้า 110 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-110.jpg"></div>
+<div class="translation">
+<p><strong>การฝ่าฝืนกฎ (Violations)</strong> ก็เป็นข้อผิดพลาดของมนุษย์รูปแบบหนึ่งเช่นกัน เป็นการฝ่าฝืนกฎเกณฑ์โดยเจตนา บางครั้งเป็นความพยายามชดเชยข้อผิดพลาดแฝงด้วยการจงใจไม่ปฏิบัติตามขั้นตอนที่ถูกต้อง</p>
+<ul>
+<li>“ทางลัด (shortcuts)” หรือ “การหลีกเลี่ยงขั้นตอน (workarounds)”</li>
+<li>การไม่ปฏิบัติตามขั้นตอนของ AMM ฯลฯ</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ผลลัพธ์ — แล้วจะเกิดอะไรต่อไป?</span><span class="pnum">หน้า 111 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-111.jpg"></div>
+<div class="translation">
+<p>ตัวอย่างภาพผลลัพธ์/ผลกระทบที่เกิดจากข้อผิดพลาดในงานซ่อมบำรุง ซึ่งอาจนำไปสู่อุบัติการณ์หรืออุบัติเหตุที่มีความร้ายแรงต่างกัน — ดูภาพต้นฉบับประกอบ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ผลลัพธ์ (ต่อ)</span><span class="pnum">หน้า 112 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-112.jpg"></div>
+<div class="translation">
+<p>ภาพตัวอย่างเพิ่มเติมแสดงผลกระทบของข้อผิดพลาดในงานซ่อมบำรุงอากาศยานต่อความปลอดภัยและความสมควรเดินอากาศ — ดูภาพต้นฉบับประกอบ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">บันไดวัฒนธรรมความปลอดภัย (Patrick Hudson)</span><span class="pnum">หน้า 113 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-113.jpg"></div>
+<div class="translation">
+<p>หน้านี้อ้างอิงวิดีโอบรรยายของ <strong>Professor Patrick Hudson</strong> เรื่อง <em>“Moving up the culture ladder”</em> ซึ่งอธิบายแนวคิด “บันไดวัฒนธรรมความปลอดภัย (Safety Culture Ladder)” ที่แบ่งวุฒิภาวะด้านวัฒนธรรมความปลอดภัยขององค์กรออกเป็นระดับขั้น ตั้งแต่ระดับที่ไม่สนใจความปลอดภัย ไปจนถึงระดับที่ความปลอดภัยฝังอยู่ในทุกกระบวนการขององค์กรอย่างเป็นธรรมชาติ</p>
+<table class="tf">
+<tr><th>ระดับ (Rung)</th><th>ลักษณะโดยสังเขป</th></tr>
+<tr><td><strong>Pathological</strong></td><td>ไม่สนใจความปลอดภัย สนใจแค่ไม่ให้ถูกจับได้</td></tr>
+<tr><td><strong>Reactive</strong></td><td>ให้ความสำคัญกับความปลอดภัยหลังเกิดอุบัติเหตุแล้วเท่านั้น</td></tr>
+<tr><td><strong>Calculative</strong></td><td>มีระบบจัดการความปลอดภัยตามข้อกำหนด แต่ยังเป็นเชิงระบบราชการ</td></tr>
+<tr><td><strong>Proactive</strong></td><td>คาดการณ์ปัญหาล่วงหน้า พนักงานมีส่วนร่วมเชิงรุก</td></tr>
+<tr><td><strong>Generative</strong></td><td>ความปลอดภัยเป็นส่วนหนึ่งของวิธีการทำงานตามธรรมชาติ ทุกคนมีส่วนร่วมและรับผิดชอบร่วมกัน</td></tr>
+</table>
+<p class="en">ที่มา: Prof. Patrick Hudson – "Moving up the culture ladder" (YouTube)</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การจัดการกับข้อผิดพลาด</span><span class="pnum">หน้า 114 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-114.jpg"></div>
+<div class="translation">
+<div class="note">→ ในงานซ่อมบำรุงอากาศยาน แนวทางที่เปิดเผยต่อข้อผิดพลาดเป็นสิ่งจำเป็นอย่างยิ่ง!!</div>
+<p>พนักงานทุกคนต้องรู้ว่าการรายงานข้อผิดพลาดหรือความเบี่ยงเบนจะไม่นำไปสู่การลงโทษทางวินัย แต่การนิ่งเงียบเกี่ยวกับมันต่างหากที่จะนำไปสู่การลงโทษ!</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การสอบสวนข้อผิดพลาด (Investigation)</span><span class="pnum">หน้า 115 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-115.jpg"></div>
+<div class="translation">
+<ul>
+<li>ระบุสาเหตุ</li>
+<li>ประเมินขอบเขตของข้อผิดพลาด</li>
+<li>ดำเนินมาตรการทันที</li>
+<li>แจ้งหัวหน้างาน</li>
+<li>ขอความช่วยเหลือเมื่อจำเป็น</li>
+<li>กำหนดวิธีการวิเคราะห์ข้อผิดพลาด</li>
+<li>พัฒนาทางแก้ไขที่เป็นไปได้ — เลือกทางออกที่ดีที่สุดและวางแผนดำเนินการ</li>
+<li>นำทางออกไปปฏิบัติ</li>
+<li>บันทึกมาตรการที่ดำเนินการ</li>
+<li>ติดตามมาตรการแก้ไขอย่างต่อเนื่อง</li>
+<li>ประเมินผลลัพธ์</li>
+<li>ให้ข้อมูลแก่พนักงานอย่างต่อเนื่อง</li>
+</ul>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-9" class="module-section">
+<h2 class="section-title">Module 9.9 Safety Management</h2>
+
+<div class="toc">หัวข้อ: การบริหารความเสี่ยง (Risk Management), การรายงานเหตุการณ์, วัฒนธรรมความปลอดภัย/วัฒนธรรมเป็นธรรม (Safety/Just Culture), การระบุ/หลีกเลี่ยง/รายงานอันตราย, โปรแกรมปัจจัยมนุษย์ระดับองค์กร, การรับมือสถานการณ์ฉุกเฉิน</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 116 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-116.jpg"></div>
+<div class="translation"><h4>บทที่ 9.9 — การบริหารจัดการความปลอดภัย</h4><p class="en">หัวข้อนี้เป็นเนื้อหาใหม่ทั้งหมดในฉบับปรับปรุง Version 04/2025 แทนที่หัวข้อเดิม "Hazards in the Workplace"</p></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม</span><span class="pnum">หน้า 117 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-117.jpg"></div>
+<div class="translation">
+<ul>
+<li>การบริหารความเสี่ยง (Risk management)</li>
+<li>การรายงานเหตุการณ์ (Occurrence reporting)</li>
+<li>วัฒนธรรมความปลอดภัย — วัฒนธรรมเป็นธรรม (Safety culture – Just culture)</li>
+<li>การระบุ หลีกเลี่ยง และรายงานอันตราย</li>
+<li>โปรแกรมปัจจัยมนุษย์ระดับองค์กร: ความเป็นมืออาชีพและความซื่อสัตย์, พฤติกรรมที่ก่อให้เกิดข้อผิดพลาด, การรายงานข้อผิดพลาด, นโยบายทางวินัย, การสอบสวนข้อผิดพลาด, มาตรการแก้ไขปัญหา, ผลป้อนกลับ, ความกล้าแสดงออก</li>
+<li>การรับมือสถานการณ์ฉุกเฉิน</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">เป้าหมายของ SMS</span><span class="pnum">หน้า 118 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-118.jpg"></div>
+<div class="translation">
+<p><strong>ระบบจัดการความปลอดภัย (Safety Management System – SMS)</strong> ของ EASA เป็นแนวทางเชิงรุกในการระบุ ประเมิน และควบคุมความเสี่ยงในอุตสาหกรรมการบิน</p>
+<p>SMS อยู่บนพื้นฐานของหลักการบริหารความเสี่ยงและการพัฒนาปรับปรุงอย่างต่อเนื่อง ครอบคลุมการนำนโยบายและขั้นตอนความปลอดภัยไปปฏิบัติ การฝึกอบรมพนักงาน การเก็บรวบรวมและวิเคราะห์ข้อมูลที่เกี่ยวข้องกับความปลอดภัย และการดำเนินมาตรการลดความเสี่ยง</p>
+<div class="note">→ เป้าหมายคือการพัฒนาความปลอดภัยให้ดียิ่งขึ้น โดยระบุความเสี่ยงที่อาจเกิดขึ้นได้ตั้งแต่เนิ่นๆ และดำเนินมาตรการที่เหมาะสมเพื่อป้องกันอุบัติเหตุและอุบัติการณ์</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">งานในการบริหารจัดการความปลอดภัย</span><span class="pnum">หน้า 119 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-119.jpg"></div>
+<div class="translation">
+<p>ฝ่ายบริหารขององค์กรต้องนำ SMS ไปปฏิบัติให้สอดคล้องกับข้อกำหนดเฉพาะขององค์กร ซึ่งรวมถึง:</p>
+<ul>
+<li>กำหนดนโยบายและวัตถุประสงค์ด้านความปลอดภัย</li>
+<li>สร้างกรอบโครงสร้างองค์กรที่เหมาะสมในทุกระดับชั้นบังคับบัญชา</li>
+<li>ให้ผู้มีส่วนได้ส่วนเสียทุกฝ่ายมีส่วนร่วมอย่างจริงจัง (ฝ่ายบริหาร พนักงาน และผู้รับเหมาช่วง)</li>
+<li>นำกระบวนการบริหารความเสี่ยงด้านความปลอดภัยมาใช้</li>
+<li>วัดผลด้านสมรรถนะความปลอดภัย</li>
+<li>มั่นใจว่ามีการสื่อสารที่มุ่งเน้นความปลอดภัย</li>
+<li>สร้างวัฒนธรรมความปลอดภัย (Just Culture)</li>
+<li>กำหนดผู้รับผิดชอบด้านความปลอดภัย → ผู้จัดการความปลอดภัย (Safety Manager), คณะกรรมการจัดการ/ทบทวนความปลอดภัย, กลุ่มปฏิบัติการด้านความปลอดภัย และผู้เชี่ยวชาญ</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">นโยบายความปลอดภัย (Safety Policy)</span><span class="pnum">หน้า 120 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-120.jpg"></div>
+<div class="translation">
+<p>ด้วยนโยบายความปลอดภัย ฝ่ายบริหารกำหนดหลักการ กระบวนการ และวิธีการของ SMS ในองค์กร เพื่อบรรลุผลลัพธ์ด้านความปลอดภัยที่ต้องการ ➔</p>
+<ul>
+<li>ความมุ่งมั่นของบริษัทต่อวัฒนธรรมความปลอดภัย (เขียนไว้ในเอกสาร expositions เช่น MOE)</li>
+<li>การกำหนดวัตถุประสงค์ด้านความปลอดภัย (วัดผลได้และสื่อสารให้ทราบทั่วกัน)</li>
+<li>การสร้าง “วัฒนธรรมเป็นธรรม (Just Culture)”</li>
+<li>การจัดตั้ง “กระบวนการพัฒนาปรับปรุงอย่างต่อเนื่อง”</li>
+<li>การจัดสรรทรัพยากรที่จำเป็นสำหรับการนำนโยบายความปลอดภัยไปปฏิบัติ</li>
+<li>ขั้นตอนการรายงานด้านความปลอดภัย</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">สถิติ (Statistics)</span><span class="pnum">หน้า 121 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-121.jpg"></div>
+<div class="translation">
+<p>กราฟแสดงสถิติ<strong>อุบัติเหตุร้ายแรงที่มีผู้เสียชีวิต (Fatal Accidents)</strong> ของเที่ยวบินผู้โดยสารและขนส่งสินค้าด้วยอากาศยานขนาดใหญ่ทั่วโลก — ดูรายละเอียดตัวเลขในภาพต้นฉบับประกอบ</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ระบบจัดการความปลอดภัย (คำนิยาม)</span><span class="pnum">หน้า 122 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-122.jpg"></div>
+<div class="translation">
+<p>ระบบจัดการความปลอดภัยเป็นระบบเชิงรุก ที่:</p>
+<ul>
+<li>ระบุอันตราย (Identifies hazards)</li>
+<li>ประเมินความเสี่ยงจากอันตรายเหล่านั้น</li>
+<li>ดำเนินมาตรการเพื่อลดความเสี่ยงเหล่านั้นให้อยู่ในระดับที่ยอมรับได้</li>
+<li>จากนั้นทบทวนประสิทธิผลของมาตรการเหล่านั้น</li>
+</ul>
+<div class="note">→ การบริหารจัดการความปลอดภัยมีเป้าหมายให้ความปลอดภัยเป็นภารกิจด้านการบริหารจัดการที่ต้องฝังรากลึกทั่วทั้งบริษัท ถูกนำมาพิจารณาอย่างเป็นระบบในกระบวนการทำงาน และให้พนักงานทุกคนมีส่วนร่วม</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">กระบวนการบริหารความเสี่ยง → การระบุอันตราย</span><span class="pnum">หน้า 123 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-123.jpg"></div>
+<div class="translation">
+<p>กระบวนการบริหารความเสี่ยงเริ่มต้นด้วยการระบุ รวบรวม และจัดหมวดหมู่อันตรายอย่างเป็นระบบโดยพนักงานทุกคน เพื่อให้การระบุและจัดโครงสร้างอันตรายง่ายขึ้น ต้องกำหนดหมวดหมู่ความเสี่ยงล่วงหน้าตามเนื้อหา</p>
+<p>บนพื้นฐานนี้ จึงตามด้วยการสำรวจอันตรายที่เกี่ยวข้องกับความปลอดภัยในกระบวนการบริการ ผลิตภัณฑ์ หรือการผลิต หรือสภาพแวดล้อมของสิ่งเหล่านั้น</p>
+<div class="note">→ กล่าวง่ายๆ <strong>อันตราย (Hazard)</strong> คือสิ่งที่ “มีศักยภาพที่จะก่อให้เกิดอันตราย” และโดยธรรมชาติต้องมีพลังงานในรูปแบบใดรูปแบบหนึ่งอยู่ในตัว: สภาวะ วัตถุ กิจกรรม หรือเหตุการณ์ที่อาจก่อให้เกิดการบาดเจ็บต่อบุคคล ความเสียหายต่ออุปกรณ์หรือโครงสร้าง การสูญเสียวัสดุ หรือความบกพร่องในการปฏิบัติหน้าที่ที่กำหนดไว้</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">แหล่งข้อมูลสำหรับการระบุอันตราย</span><span class="pnum">หน้า 124 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-124.jpg"></div>
+<div class="translation">
+<ul>
+<li>ข้อมูลจากอุบัติการณ์และข้อผิดพลาด</li>
+<li>รายงานความปลอดภัย</li>
+<li>การปรึกษากลุ่มผู้เชี่ยวชาญ</li>
+<li>รายงานด้านปัจจัยมนุษย์</li>
+<li>แบบสอบถาม/การสำรวจจากคุณภาพความปลอดภัยและการตรวจสอบ (audits)</li>
+<li>การสอบสวนภายใน (เช่น 8D/5W)</li>
+<li>ข้อมูลจากภายนอก</li>
+<li>งานประชุมและสิ่งพิมพ์</li>
+<li>แบบจำลองอันตรายหรือการวิเคราะห์ความปลอดภัย (เช่น FMEA)</li>
+<li>ข้อมูลจากพนักงาน</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ความเสี่ยง (Risk)</span><span class="pnum">หน้า 125 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-125.jpg"></div>
+<div class="translation">
+<div class="note">➔ <strong>ความเสี่ยงด้านความปลอดภัย (Safety Risk)</strong> หมายถึงการประเมินผลที่ตามมาของอันตราย โดยแสดงในรูปของความน่าจะเป็นที่คาดหวัง (probability) และผลกระทบ (severity) โดยพิจารณาจากสถานการณ์ที่เลวร้ายที่สุดที่คาดการณ์ได้</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การวิเคราะห์และประเมินความเสี่ยง</span><span class="pnum">หน้า 126 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-126.jpg"></div>
+<div class="translation">
+<p>เมื่อบริษัทระบุอันตรายทั้งหมดแล้ว ต้องเริ่มกระบวนการวิเคราะห์และประเมินอันตรายเหล่านั้น</p>
+<p>ในทางปฏิบัติ พบว่าการรวบรวมและจัดระเบียบความเสี่ยงด้านความปลอดภัยในรูปแบบ risk FMEA* และการแสดงผลผ่านตารางเมทริกซ์ความเสี่ยง (risk matrix) แบบ 3–5 กลุ่มความเสี่ยง ช่วยได้อย่างมาก</p>
+<p class="en">*Failure Mode and Effects Analysis (การวิเคราะห์รูปแบบความล้มเหลวและผลกระทบ)</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การลดความเสี่ยง (Risk Mitigation)</span><span class="pnum">หน้า 127 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-127.jpg"></div>
+<div class="translation">
+<p>เมื่อระบุ วิเคราะห์ และประเมินความเสี่ยงแล้ว จึงกำหนดมาตรการบริหารความเสี่ยง กลยุทธ์ต่อไปนี้สามารถใช้ได้โดยทั่วไป ไม่ว่าจะเดี่ยวๆ หรือรวมกัน:</p>
+<ul>
+<li>การหลีกเลี่ยงความเสี่ยง (Risk avoidance)</li>
+<li>การลดความเสี่ยง (Risk reduction ➔ Mitigation)</li>
+<li>การยอมรับความเสี่ยง (Risk acceptance)</li>
+</ul>
+<p>ขึ้นอยู่กับมาตรการ อาจยังคงต้องมีมาตรการติดตามอย่างใกล้ชิดต่อไป</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การบริหารความเสี่ยง (ต่อ)</span><span class="pnum">หน้า 128 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-128.jpg"></div>
+<div class="translation">
+<p>ประสิทธิผลของมาตรการควบคุมที่นำไปปฏิบัติต้องถูกติดตามอย่างเป็นระบบหลังการดำเนินการ</p>
+<p>นอกจากการบันทึกตัวชี้วัดสมรรถนะหลัก (KPI) แล้ว ยังต้องติดตามประสิทธิผลของมาตรการที่ดำเนินการ และทบทวนความเกี่ยวข้องของความเสี่ยง/มาตรการอย่างต่อเนื่อง</p>
+<div class="note">→ เพื่อการนี้ บริษัทต้องมีกระบวนการที่บันทึกเป็นเอกสารเพื่อติดตามประสิทธิผลของ SMS และรับประกันการพัฒนาปรับปรุงอย่างต่อเนื่อง รวมถึงการปฏิบัติตามข้อกำหนดความปลอดภัยตามกฎระเบียบ (compliance monitoring)</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ผลป้อนกลับและการสื่อสาร</span><span class="pnum">หน้า 129 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-129.jpg"></div>
+<div class="translation">
+<p>ผู้บริหารที่รับผิดชอบ (Accountable Manager) ต้องได้รับข้อมูลอย่างสม่ำเสมอจากผู้จัดการความปลอดภัยและคณะกรรมการจัดการ/ทบทวนความปลอดภัย ต้องริเริ่มมาตรการและติดตามการดำเนินการ</p>
+<ul>
+<li>จัดตั้งระบบการรายงานและการประชุม</li>
+<li>สร้างวัฒนธรรมความปลอดภัย</li>
+<li>เปิดกว้างต่อผลป้อนกลับ (รายงาน)</li>
+</ul>
+<div class="note">→ การบริหารจัดการความปลอดภัยบรรลุผลได้ด้วยการค้นหาปัญหาที่อาจเกิดขึ้นล่วงหน้า ไม่ใช่รอให้ปัญหาเกิดขึ้นก่อน!</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การส่งเสริมความรู้และวัฒนธรรมความปลอดภัย</span><span class="pnum">หน้า 130 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-130.jpg"></div>
+<div class="translation">
+<p>เพียงแค่กำหนดเป้าหมายความปลอดภัยเชิงปฏิบัติการและปรับโครงสร้างองค์กรให้สอดคล้องนั้นไม่เพียงพอสำหรับความสำเร็จอย่างยั่งยืนของ SMS แนวคิดด้านความปลอดภัยต้องฝังแน่นในความคิดของพนักงานและถูกนำมาปฏิบัติจริง</p>
+<p>เพื่อนำข้อกำหนดด้านความปลอดภัยและวัฒนธรรมความปลอดภัยไปปฏิบัติอย่างเหมาะสมภายในบริษัท พนักงานต้องมีคุณสมบัติด้านความปลอดภัยที่เพียงพอ ตัวอย่างเช่น พนักงานทุกคนต้องผ่านการฝึกอบรมด้านความปลอดภัยและคุ้นเคยกับพื้นฐานของปัจจัยมนุษย์</p>
+<p>สิ่งสำคัญคือบริษัทต้องมีโครงสร้างการสื่อสารที่มีประสิทธิภาพ ซึ่งไม่เพียงช่วยบรรลุเป้าหมายความปลอดภัย แต่ยังสนับสนุนการพัฒนาวัฒนธรรมความปลอดภัยเชิงปฏิบัติการด้วย เช่น การพูดคุยหัวข้อด้านความปลอดภัยในที่ประชุมทีม จดหมายข่าวทางอีเมล หรือจดหมายข่าวพนักงาน</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">วัฒนธรรมองค์กร — วัฒนธรรมเป็นธรรมและวัฒนธรรมแห่งการเรียนรู้</span><span class="pnum">หน้า 131 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-131.jpg"></div>
+<div class="translation">
+<p>องค์กรต้องการให้คุณเรียนรู้จากข้อผิดพลาดของตนเอง เสริมพลังให้พนักงาน และรับฟัง ความผิดพลาดของมนุษย์ส่วนใหญ่เป็นอาการของความล้มเหลวเชิงระบบ</p>
+<p><strong>“วัฒนธรรมเป็นธรรม (Just Culture)”</strong> สร้างสมดุลที่สมจริงระหว่าง “การตำหนิ (blame)” และ “การไม่ตำหนิ (no blame)” ผู้คนได้รับการปฏิบัติอย่างเป็นธรรม แต่แต่ละบุคคลสามารถถูกให้รับผิดชอบต่อการกระทำและการตัดสินใจที่ไม่เหมาะสมของตนได้</p>
+<div class="quote">“วัฒนธรรมองค์กรมีผลกระทบที่แท้จริงอย่างมากต่อพฤติกรรมและประสิทธิภาพของบุคคลากรภายในองค์กร ไม่มีข้อสงสัยเลยว่าการตัดสินใจและการกระทำของฝ่ายบริหาร หรือบ่อยครั้งกว่านั้นคือการไม่ตัดสินใจและการเพิกเฉย เป็นสาเหตุของอุบัติเหตุ”<br>— John Lauber (NTSB)</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">วัฒนธรรมเป็นธรรมคืออะไร?</span><span class="pnum">หน้า 132 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-132.jpg"></div>
+<div class="translation">
+<p>บรรยากาศแห่งความไว้วางใจ ที่ผู้คนได้รับการสนับสนุน (และแม้แต่ได้รับรางวัล) สำหรับ...</p>
+<ul>
+<li>...การให้ข้อมูลที่สำคัญเกี่ยวกับความปลอดภัย แต่...</li>
+<li>...ในขณะเดียวกันก็ต้องชัดเจนว่าเส้นแบ่งระหว่างพฤติกรรมที่ยอมรับได้และยอมรับไม่ได้อยู่ตรงไหน</li>
+</ul>
+<div class="note">→ พนักงานทุกคนต้องรู้ว่าการรายงานข้อผิดพลาด* หรือความเบี่ยงเบนจะไม่นำไปสู่การลงโทษทางวินัย แต่การไม่รายงานต่างหากที่จะนำไปสู่การลงโทษ!!<br><span class="en">*เว้นแต่จะมี “ความประมาทเลินเล่ออย่างร้ายแรงหรือการกระทำผิดโดยเจตนา”</span></div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">วัฒนธรรม (Culture)</span><span class="pnum">หน้า 133 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-133.jpg"></div>
+<div class="translation">
+<p>เราต้องการวัฒนธรรมที่ยอมรับว่าแม้แต่ผู้เชี่ยวชาญที่มีความสามารถก็ยังทำผิดพลาดได้ และแม้แต่ผู้เชี่ยวชาญที่มีความสามารถก็อาจพัฒนาบรรทัดฐานที่ไม่ดีต่อสุขภาพ (เช่น ทางลัด การฝ่าฝืนกฎเป็นประจำ) แต่ต้องแสดงความไม่ยอมรับอย่างเด็ดขาด (zero tolerance) ต่อพฤติกรรมประมาทเลินเล่อ กฎระเบียบ:</p>
+<ul>
+<li>เรามีความ “เป็นธรรม (Just)” อยู่แล้วมากน้อยเพียงใด?</li>
+<li>เราวัดผลสิ่งนี้ได้อย่างไร?</li>
+</ul>
+<div class="note">→ คุณไม่สามารถบริหารจัดการสิ่งที่คุณไม่ได้วัดผลได้!</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การรายงานข้อผิดพลาดและอันตราย</span><span class="pnum">หน้า 134 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-134.jpg"></div>
+<div class="translation">
+<p>พนักงานต้องมีโอกาสรายงานอันตราย/ปัญหาที่เกี่ยวข้องกับความปลอดภัยผ่านระบบรายงานภายใน</p>
+<h4>มีช่องทางการรายงานอะไรบ้าง?</h4>
+<ul>
+<li>ปัญหาด้านเอกสาร</li>
+<li>ปัญหาการปฏิบัติงาน</li>
+<li>ปัญหาการปฏิบัติการบิน</li>
+</ul>
+<p>จะหาข้อมูลเกี่ยวกับเรื่องนี้ได้ที่ไหน? บริษัทของฉันใช้ระบบใด?</p>
+<ul>
+<li>สื่อสารข้อความด้านความปลอดภัยทั่วทั้งบริษัท</li>
+<li>ภาวะผู้นำ ทั้งในเชิงกายภาพและผ่านนโยบาย วัตถุประสงค์ และแนวปฏิบัติ</li>
+<li>การเผยแพร่และตีพิมพ์ข้อมูลด้านความปลอดภัย</li>
+<li>การประชุมด้านความปลอดภัย</li>
+<li>การฝึกอบรมและการสื่อสาร</li>
+<li>การสร้างความไว้วางใจและความเข้าใจ</li>
+<li>การสร้างวัฒนธรรมความปลอดภัย</li>
+</ul>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การรับมือสถานการณ์ฉุกเฉิน!!!</span><span class="pnum">หน้า 135 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-135.jpg"></div>
+<div class="translation">
+<h4>ตรวจสอบ (Check)</h4>
+<p>ตรวจสอบสถานการณ์: สารเคมีหกรั่วไหล การจราจร ไฟไหม้ ไอน้ำรั่ว สายไฟฟ้า ควัน<br>ตรวจสอบผู้ประสบเหตุ: จำนวนผู้บาดเจ็บ ย้ายผู้บาดเจ็บออกจากพื้นที่อันตราย</p>
+<h4>โทรแจ้งเหตุ (Call)</h4>
+<p>โทรแจ้งหมายเลขฉุกเฉินในพื้นที่ และอธิบายสถานการณ์อย่างใจเย็น</p>
+<h4>ดูแล (Care)</h4>
+<div class="note">→ <strong>ดูแลความปลอดภัยของตนเองก่อนเป็นอันดับแรกเสมอ!!</strong></div>
+<p>ดูแลผู้บาดเจ็บ — ให้ความสำคัญกับสถานการณ์ที่เป็นอันตรายถึงชีวิตก่อนเสมอ</p>
+</div></div>
+</div>
+
+
+</section>
+
+<section id="sec-9-10" class="module-section">
+<h2 class="section-title">Module 9.10 The 'Dirty Dozen' and Risk-Mitigation</h2>
+
+<div class="toc">หัวข้อ: The Dirty Dozen (12 ปัจจัยที่นำไปสู่ข้อผิดพลาดของมนุษย์ในงานซ่อมบำรุง), วิธีลดความเสี่ยง (Risk-mitigation), การส่งเสริมความปลอดภัยและความตระหนักรู้, วัฒนธรรมองค์กร</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">หน้าแบ่งบท</span><span class="pnum">หน้า 136 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-136.jpg"></div>
+<div class="translation"><h4>บทที่ 9.10 — "The Dirty Dozen" และวิธีลดความเสี่ยง</h4></div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">ภาพรวม</span><span class="pnum">หน้า 137 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-137.jpg"></div>
+<div class="translation">
+<p><strong>The 'Dirty Dozen':</strong> 12 ปัจจัยด้านปัจจัยมนุษย์ที่พบบ่อยที่สุดในงานซ่อมบำรุงอากาศยาน ซึ่งนำไปสู่ข้อผิดพลาด</p>
+<p>วิธีลดความเสี่ยง (Risk-mitigation methods)</p>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การหลีกเลี่ยงพฤติกรรมที่ก่อให้เกิดข้อผิดพลาด (Dirty Dozen)</span><span class="pnum">หน้า 138 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-138.jpg"></div>
+<div class="translation">
+<div class="note">→ อันตรายแฝงอยู่ทุกที่ ตลอดเวลา!</div>
+<p>แบบจำลองหนึ่งที่ช่วยให้เข้าใจเรื่องนี้คือ <strong>“Dirty Dozen”</strong> ของ Gordon DuPont ประกอบด้วย 12 ปัจจัย:</p>
+<ol>
+<li>ขาดการสื่อสาร (Lack of communication)</li>
+<li>ความมั่นใจเกินไป งานประจำ ความประมาทเลินเล่อ (Overconfidence, routine, complacency)</li>
+<li>ขาดการทำงานเป็นทีม (Lack of teamwork)</li>
+<li>บรรทัดฐานหรือมาตรฐาน (Norms or standards)</li>
+<li>แรงกดดันด้านเวลา (Time pressure)</li>
+<li>ขาดความรู้ (Lack of knowledge)</li>
+<li>ขาดความสนใจ/การตระหนักรู้ (Lack of attention, awareness)</li>
+<li>ขาดทรัพยากร (Lack of resources)</li>
+<li>สิ่งรบกวนสมาธิ (Distraction)</li>
+<li>ขาดความกล้าแสดงออก (Lack of assertiveness)</li>
+<li>ความล้า — ความอ่อนเพลีย (Fatigue – Exhaustion)</li>
+<li>ความเครียด (Stress)</li>
+</ol>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">Dirty Dozen — รายละเอียด 1</span><span class="pnum">หน้า 139 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-139.jpg"></div>
+<div class="translation">
+<div class="dd-item"><strong>ขาดการสื่อสาร (Lack of Communication)</strong> — อาจเป็นทั้งวัจนภาษา ลายลักษณ์อักษร หรือทั้งสองอย่างรวมกัน เช่น เปิดแผงทิ้งไว้โดยสันนิษฐานว่ากะกลางวันจะทำงานให้เสร็จ<br><em>มาตรการป้องกัน:</em> ก) ใช้ logbook/worksheet เพื่อสื่อสารและลดความสงสัย ข) พูดคุยเรื่องงานที่ต้องทำหรือทำเสร็จแล้ว ค) ห้ามสันนิษฐานเอาเองเด็ดขาด</div>
+<div class="dd-item"><strong>ความประมาทเลินเล่อ (Complacency)</strong> — สาเหตุแอบแฝงที่เกิดจากการตรวจซ้ำๆ ในงานซ่อมบำรุงจำนวนมาก จนอาจก่อให้เกิดหรือมีส่วนทำให้การตัดสินใจผิดพลาด “ฉันตรวจตรงนั้นมาพันครั้งแล้วไม่เคยเจอปัญหาอะไรเลย”<br><em>มาตรการป้องกัน:</em> ก) ฝึกตนเองให้คาดหวังว่าจะพบข้อบกพร่องเสมอ ข) ห้ามเซ็นรับรองสิ่งที่ตนเองไม่ได้ทำเด็ดขาด</div>
+<div class="dd-item"><strong>สิ่งรบกวนสมาธิ (Distraction)</strong> — เชื่อว่าเป็นสาเหตุของข้อผิดพลาดในงานซ่อมบำรุงประมาณ 15% เกิดจากการละงาน (ทั้งทางกายและ/หรือใจ) ด้วยเหตุผลใดก็ตาม แล้วกลับมาโดยคิดว่าตนทำงานไปถึงจุดที่มากกว่าความเป็นจริง<br><em>มาตรการป้องกัน:</em> ก) ทำงานให้เสร็จหรือถอดการเชื่อมต่อก่อนละงานเสมอ ข) ทำเครื่องหมายงานที่ยังไม่เสร็จ ค) ใช้ลวดล็อกหรือ Torque seal เมื่อเป็นไปได้ ง) เมื่อกลับมาทำงานต่อ ให้ย้อนกลับไป 3 ขั้นตอนเสมอ จ) ใช้ check sheet แบบละเอียด</div>
+<div class="dd-item"><strong>ขาดความรู้ (Lack of Knowledge)</strong> — เป็นสาเหตุที่พบไม่น้อยของการตัดสินใจผิดพลาด ยิ่งรุนแรงขึ้นเมื่อรวมกับทัศนคติ “ทำได้แน่นอน (Can-Do)” ของบุคลากรซ่อมบำรุงส่วนใหญ่<br><em>มาตรการป้องกัน:</em> ก) การฝึกอบรม แรงจูงใจ ความสนใจ การฝึกฝน → สั่งสมประสบการณ์ ข) ใช้คู่มือที่ทันสมัย ค) ถามหัวหน้างานหรือผู้ที่รู้</div>
+<div class="dd-item"><strong>ขาดการทำงานเป็นทีม (Lack of Teamwork)</strong> — มักเกี่ยวข้องกับการขาดการสื่อสาร แต่สามารถเป็นสาเหตุของข้อผิดพลาดใหญ่ได้ งานซ่อมบำรุงมักเกี่ยวข้องกับผู้ปฏิบัติงานหลายคน การทำงานเป็นทีมที่ดีจึงเป็นสิ่งจำเป็นอย่างยิ่ง<br><em>มาตรการป้องกัน:</em> ก) พูดคุยว่าใครทำอะไรและอย่างไร ข) มั่นใจว่าทุกคนเข้าใจและยอมรับตรงกัน</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">Dirty Dozen — รายละเอียด 2</span><span class="pnum">หน้า 140 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-140.jpg"></div>
+<div class="translation">
+<div class="dd-item"><strong>ความล้า (Fatigue)</strong> — เป็นสาเหตุแอบแฝงที่อันตรายมาก เพราะจนกว่าจะรุนแรงมาก บุคคลมักไม่รู้ตัวว่าตนเองล้า และยิ่งไม่รู้ตัวถึงผลกระทบของความล้าที่มีต่อตนเอง<br><em>มาตรการป้องกัน:</em> ก) ตระหนักถึงอาการและสังเกตในตนเองและผู้อื่น ข) วางแผนหลีกเลี่ยงงานซับซ้อนในช่วงจังหวะชีวิตที่ต่ำสุด ค) นอนหลับและออกกำลังกายสม่ำเสมอ ง) ขอให้ผู้อื่นตรวจสอบงานของตน</div>
+<div class="dd-item"><strong>ขาดทรัพยากร (Lack of Resources)</strong> — ไม่ว่าจะทำงานให้กับที่ไหน ย่อมมีบางครั้งที่ขาดแคลนทรัพยากร และต้องตัดสินใจระหว่างหยุดบินอากาศยานหรือปล่อยให้บินต่อ ช่างซ่อมบำรุงทั่วไปมักมีทัศนคติแบบ “ทำได้แน่นอน” และภูมิใจในการซ่อมอากาศยาน การตัดสินใจนี้จึงอาจเป็นเรื่องยาก<br><em>มาตรการป้องกัน:</em> ก) ตรวจพื้นที่ต้องสงสัยตั้งแต่ต้นการตรวจสอบและ AOG ชิ้นส่วนที่ต้องการ ข) สั่งและสำรองชิ้นส่วนที่คาดว่าจะต้องใช้ล่วงหน้า ค) รู้แหล่งชิ้นส่วนทั้งหมดที่มีและจัดการยืม/รวมทรัพยากร ง) รักษามาตรฐาน หากไม่แน่ใจให้หยุดบินอากาศยาน</div>
+<div class="dd-item"><strong>แรงกดดัน (Pressure)</strong> — มีอุตสาหกรรมไม่กี่แห่งที่มีแรงกดดันให้งานเสร็จอย่างต่อเนื่องเท่านี้ เคล็ดลับคือความสามารถในการสังเกตเมื่อแรงกดดันนี้มากเกินไปหรือไม่สมเหตุสมผล<br><em>มาตรการป้องกัน:</em> ก) มั่นใจว่าแรงกดดันไม่ได้เกิดจากตัวเอง ข) สื่อสารความกังวลของตน ค) ขอความช่วยเหลือเพิ่มเติม ง) กล้าปฏิเสธ</div>
+<div class="dd-item"><strong>ขาดความกล้าแสดงออก (Lack of Assertiveness)</strong> — ช่างเทคนิคทั่วไปมักไม่ใช่คนกล้าแสดงออก และงานส่วนใหญ่ก็ไม่ได้ต้องการให้เป็นเช่นนั้น อย่างไรก็ตาม อาจมีบางครั้งที่บางสิ่งไม่ถูกต้อง และเขา/เธอจำเป็นต้องกล้าแสดงออกเพื่อไม่ให้ปัญหาถูกมองข้าม<br><em>มาตรการป้องกัน:</em> ก) หากไม่ใช่เรื่องวิกฤต ให้บันทึกใน journey logbook และเซ็นรับรองเฉพาะสิ่งที่ใช้งานได้เท่านั้น ข) ปฏิเสธที่จะลดมาตรฐานของตนเอง</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">Dirty Dozen — รายละเอียด 3</span><span class="pnum">หน้า 141 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-141.jpg"></div>
+<div class="translation">
+<div class="dd-item"><strong>ความเครียด (Stress)</strong> — เป็นส่วนหนึ่งของชีวิตประจำวันปกติ จนกว่ามันจะมากเกินไป เคล็ดลับคือความสามารถในการสังเกตเมื่อมันเริ่มมากเกินไป<br><em>มาตรการป้องกัน:</em> ก) ตระหนักว่าความเครียดส่งผลต่องานของคุณอย่างไร ข) หยุดและพิจารณาปัญหาอย่างมีเหตุผล ค) กำหนดแนวทางปฏิบัติที่สมเหตุสมผลและปฏิบัติตาม ง) หยุดพักหรืออย่างน้อยพักสั้นๆ จ) พูดคุยกับใครสักคน ฉ) ขอให้เพื่อนร่วมงานช่วยตรวจสอบงานของตน ช) ออกกำลังกาย</div>
+<div class="dd-item"><strong>บรรทัดฐาน (Norms)</strong> — สาเหตุสุดท้ายนี้เป็นปัจจัยที่ทรงพลังมาก คนส่วนใหญ่ต้องการเป็นที่ยอมรับว่าเป็นส่วนหนึ่งของกลุ่ม และบรรทัดฐานที่พัฒนาขึ้นภายในกลุ่มดังกล่าวจะกำหนดว่าพวกเขาจะมีพฤติกรรมอย่างไร<br><em>มาตรการป้องกัน:</em> ก) ทำงานตามคำสั่งเสมอ หรือขอให้เปลี่ยนคำสั่งหากไม่เหมาะสม ข) ตระหนักว่า “บรรทัดฐาน” ไม่ได้ทำให้สิ่งนั้นถูกต้องเสมอไป!</div>
+<div class="dd-item"><strong>ขาดการตระหนักรู้ (Lack of Awareness)</strong> — มักเกิดขึ้นกับบุคลากรซ่อมบำรุงที่มีประสบการณ์สูงมาก ซึ่งไม่ได้คิดถึงผลที่อาจตามมาจากงานที่ตนกำลังทำอย่างครบถ้วน คู่มือไม่ครอบคลุมความล้มเหลวทุกรูปแบบ และภายหลังเกิดเหตุมักมีคนพูดว่าสามัญสำนึกควรบอกคุณแล้วว่าจะเป็นแบบนั้น<br><em>มาตรการป้องกัน:</em> ก) คิดถึงสิ่งที่อาจเกิดขึ้นในกรณีที่เกิดอุบัติเหตุ ข) ตรวจสอบว่างานของตนขัดแย้งกับการดัดแปลงหรือซ่อมแซมที่มีอยู่แล้วหรือไม่ ค) ถามผู้อื่นว่าเห็นปัญหาใดๆ ในงานที่ทำแล้วหรือไม่</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การส่งเสริมความปลอดภัยและความตระหนักรู้</span><span class="pnum">หน้า 142 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-142.jpg"></div>
+<div class="translation">
+<p>การส่งเสริมความปลอดภัย (Safety Promotion), วัฒนธรรมเป็นธรรม (Just Culture) และความตระหนักรู้ (Awareness) มีเป้าหมายเพื่อส่งเสริมวัฒนธรรมความปลอดภัยและลดความเสี่ยงในหมู่พนักงานทุกคน รวมถึงสื่อสารข้อมูลและมาตรการด้านความปลอดภัยที่จำเป็นไปยังพนักงานทุกคน มีมาตรการ 3 ประการสำหรับเรื่องนี้:</p>
+<ol>
+<li>การฝึกอบรมด้านความปลอดภัย (Safety Trainings)</li>
+<li>การสื่อสารด้านความปลอดภัย (Safety Communication)</li>
+<li>ความตระหนักรู้และการมีส่วนร่วมเชิงรุกเพื่อหลีกเลี่ยงความเสี่ยงแฝงหรือความเสี่ยงในอนาคต</li>
+</ol>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">พฤติกรรม → วัฒนธรรมองค์กร</span><span class="pnum">หน้า 143 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-143.jpg"></div>
+<div class="translation">
+<p><strong>วัฒนธรรมความปลอดภัยขององค์กร:</strong></p>
+<ul>
+<li>ระดับพฤติกรรมปลอดจากความเสี่ยงที่ตกลงร่วมกันสำหรับตนเองและผู้ที่ทำงานร่วมด้วย</li>
+<li>การมีส่วนร่วมเชิงรุกในกระบวนการด้านความปลอดภัย</li>
+</ul>
+<div class="note">→ ระบบทั้งหมดของ SMS และเจตนาที่ดีจะได้ผลก็ต่อเมื่อ SMS นั้นได้รับการสนับสนุนด้วยวัฒนธรรมความปลอดภัยที่มีประสิทธิผล และวัฒนธรรมความปลอดภัยเป็นผลลัพธ์จากภาวะผู้นำ การบริหารจัดการ ความมุ่งมั่นที่แสดงออกอย่างชัดเจนของทีมผู้บริหาร และแรงจูงใจของพนักงานในการสนับสนุนระบบความปลอดภัยของบริษัท</div>
+</div></div>
+</div>
+
+<div class="page-card"><div class="page-head"><span class="ptitle">การลดความเสี่ยง (Risk Mitigation)</span><span class="pnum">หน้า 144 / 144</span></div>
+<div class="content"><div class="imgwrap"><img src="p-144.jpg"></div>
+<div class="translation">
+<p>ในบริษัทต่างๆ แนวทางที่เปิดเผยต่อข้อผิดพลาดเป็นสิ่งจำเป็นอย่างยิ่งเพื่อ:</p>
+<ul>
+<li>ลดศักยภาพการเกิดข้อผิดพลาดในอนาคต!</li>
+<li>หลีกเลี่ยงความกลัว!</li>
+<li>พัฒนาวัฒนธรรมข้อผิดพลาด (Culture of error)!</li>
+<li>สร้างความไว้วางใจ!</li>
+</ul>
+<div class="note">🎉 จบเนื้อหา Module 9 – Human Factors ฉบับปรับปรุง Version 04/2025 ครบทั้ง 144 หน้าแล้ว ขอให้โชคดีกับการสอบ EASA Part-66 ครับ!</div>
+</div></div>
+</div>
+
+
+</section>
+
+</main>
+
+<a href="#top" class="top-link" title="กลับขึ้นบนสุด">↑</a>
+
+<footer>Module 9 – Human Factors | EASA Part-66 CAT-A/B1/B2 Basic Training | ฉบับแปลไทยฉบับสมบูรณ์ (9.0–9.10) | Version 04/2025 | แปลไทยเพื่อการศึกษาเท่านั้น (For Training Purposes Only)</footer>
+</body>
+</html>
